@@ -1,0 +1,13 @@
+name: Validate data pack
+
+on:
+  pull_request:
+
+jobs:
+  Mecha:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mcbeet/check-commands@v1
+        with:
+          source: .
+          stats: true
