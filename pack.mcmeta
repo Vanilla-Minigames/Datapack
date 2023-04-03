@@ -1,0 +1,14 @@
+{
+	"pack": {
+		"description": "§6Vanilla Minigames §aData pack",
+		"pack_format": 12
+	},
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "advancements/.*"
+            }
+        ]
+    }
+}
