@@ -3,7 +3,8 @@ tellraw @a [{"text":"[","color":"gray"},{"text":"Vanilla Minigames","color":"gol
 scoreboard objectives add ID dummy
 scoreboard objectives setdisplay list ID
 scoreboard objectives add rank dummy
-scoreboard objectives add data dummy
+scoreboard objectives add value dummy
+scoreboard objectives add temp dummy
 scoreboard objectives add itemCount dummy
 scoreboard objectives add itemOrgCount dummy
 scoreboard objectives add l trigger
@@ -79,12 +80,12 @@ team add 90player {"text":"Player","color":"gray"}
 team modify 90player color gray
 team modify 90player collisionRule never
 
-execute store success score #load data run function vm:tick
-execute if score #load data matches 0 run say §c§lError [Tick]
-execute if score #load data matches 0 as @a run gamemode spectator @s
-execute store success score #load data run function vm:5t
-execute if score #load data matches 0 run say §c§lError [5t]
-execute if score #load data matches 0 as @a run gamemode spectator @s
-execute store success score #load data run function vm:1sec
-execute if score #load data matches 0 run say §c§lError [1sec]
-execute if score #load data matches 0 as @a run gamemode spectator @s
+execute store success score #load temp run function vm:tick
+execute if score #load temp matches 0 run say §c§lError [Tick]
+execute if score #load temp matches 0 as @a run gamemode spectator @s
+execute store success score #load temp run function vm:5t
+execute if score #load temp matches 0 run say §c§lError [5t]
+execute if score #load temp matches 0 as @a run gamemode spectator @s
+execute store success score #load temp run function vm:1sec
+execute if score #load temp matches 0 run say §c§lError [1sec]
+execute if score #load temp matches 0 as @a run gamemode spectator @s
