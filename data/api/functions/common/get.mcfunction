@@ -1,2 +1,2 @@
-scoreboard players operation #action temp = #read_action value
+scoreboard players operation #action temp = #get_action value
 function api:common/generated/index
