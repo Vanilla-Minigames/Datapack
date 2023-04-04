@@ -1,5 +1,10 @@
 tag @s remove skywars
-tag @s remove skywarswait
+tag @s remove skywarsred
+tag @s remove skywarsblue
+tag @s remove skywarsyellow
+tag @s remove skywarsgreen
+tag @s remove skywarswait_1_8
+tag @s remove skywarswait_1_16
 
 title @s actionbar ""
 effect clear @s

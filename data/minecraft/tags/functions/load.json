@@ -1,6 +1,7 @@
 {
 	"values":[
 	  	"vm:info",
+		"skywars:info",
 		"api:common/init",
 		"api:ranks/load"
 	]

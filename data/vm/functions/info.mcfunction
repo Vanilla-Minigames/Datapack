@@ -13,6 +13,7 @@ scoreboard objectives add apply_damage dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game
 scoreboard objectives add deaths deathCount
 scoreboard objectives add kills totalKillCount
+scoreboard objectives add health health
 scoreboard objectives add doublejump minecraft.custom:minecraft.jump
 scoreboard objectives add doublejumpTimer minecraft.custom:minecraft.play_time
 
@@ -82,6 +83,19 @@ team modify 80premium collisionRule never
 team add 90player {"text":"Player","color":"gray"}
 team modify 90player color gray
 team modify 90player collisionRule never
+
+team add Red {"text":"Rot","color":"red"}
+team modify Red friendlyFire false
+team modify Red color red
+team add Blue {"text":"Blue","color":"blue"}
+team modify Blue friendlyFire false
+team modify Blue color blue
+team add Yellow {"text":"Yellow","color":"yellow"}
+team modify Yellow friendlyFire false
+team modify Yellow color yellow
+team add Green {"text":"Green","color":"green"}
+team modify Green friendlyFire false
+team modify Green color green
 
 execute store success score #load temp run function vm:tick
 execute if score #load temp matches 0 run say §c§lError [Tick]

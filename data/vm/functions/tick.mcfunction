@@ -1,8 +1,8 @@
 execute as @a[tag=!registered] run function api:players/create/current
 
-execute as @a[tag=fall,nbt={OnGround: 0b}] store result score @s apply_damage run data get entity @s FallDistance
-execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround: 1b}] run scoreboard players remove @s apply_damage 3
-execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround: 1b}] run function vm:damage
+execute as @a[tag=skywars,nbt={OnGround: 0b}] store result score @s apply_damage run data get entity @s FallDistance
+execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players remove @s apply_damage 3
+execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run function vm:damage
 
 spawnpoint @a[tag=lobby,nbt={Dimension:"minecraft:overworld"}] 0 19 0
 
@@ -25,6 +25,7 @@ execute as @e[type=chest_minecart,tag=lobby_gui] store result score @s temp run 
 execute as @e[type=chest_minecart,tag=lobby_gui] unless score @s temp = @s value run function vm:gui/click
 
 execute if entity @a[tag=skywars] run function skywars:tick
-execute if entity @a[tag=skywarswait] run function skywars:tick
+execute if entity @a[tag=skywarswait_1_8] run function skywars:tick
+execute if entity @a[tag=skywarswait_1_16] run function skywars:tick
 
 schedule function vm:tick 1t
