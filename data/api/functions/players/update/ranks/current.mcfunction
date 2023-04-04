@@ -1,6 +1,7 @@
 function api:players/get/current
 
 loot spawn ~ ~ ~ loot vm:current_players_head
+data modify storage api:players current.name set from entity @e[type=item,distance=..2,sort=nearest,limit=1] Item.tag.SkullOwner.Name
 
 data modify storage api:ranks playerName.selected set from storage api:players current.name
 
