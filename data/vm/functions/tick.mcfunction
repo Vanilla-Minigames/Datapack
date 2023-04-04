@@ -4,8 +4,7 @@ execute as @a[tag=fall,nbt={OnGround: 0b}] store result score @s apply_damage ru
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround: 1b}] run scoreboard players remove @s apply_damage 3
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround: 1b}] run function vm:damage
 
-spawnpoint @a[tag=lobby,nbt={Dimension: "minecraft:overworld"}] 0 19 0
-scoreboard players add @a playtime 1
+spawnpoint @a[tag=lobby,nbt={Dimension:"minecraft:overworld"}] 0 19 0
 
 execute as @a[scores={l=1..}] run function vm:leave
 tp @a[scores={l=1..}] 0 19 0

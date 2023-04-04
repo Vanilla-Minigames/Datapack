@@ -21,7 +21,7 @@ execute if score #skywarsteams temp matches 4.. run tag @r[tag=skywarswait,tag=!
 tag @a[tag=skywarswait,tag=!skywarsred,tag=!skywarsblue,tag=!skywarsyellow,tag=!skywarsgreen] add skywarsred
 
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 if loaded 0 0 0 run function skywars:reset_1_16/1
-execute if score #skywarsmap temp matches 1 in skywars:1_16/1 unless loaded 0 0 0 run schedule function skywars:reset_1_16/1 3s
+execute if score #skywarsmap temp matches 1 in skywars:1_16/1 unless loaded 0 0 0 run schedule function skywars:reset_1_16/1 2s
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skywarswait,tag=skywarsred] -15 4 -46
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skywarswait,tag=skywarsblue] 13 4 -43
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skywarswait,tag=skywarsyellow] 13 4 46
