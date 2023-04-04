@@ -23,7 +23,7 @@ def generate():
     first_start = 1
     second_end = 2**SCOREBOARD_SEARCH_TREE_DEPTH
     second_start = int(second_end / 2) + 1
-    first_end = second_start
+    first_end = second_start - 1
 
     with open(os.path.join(generation_path, "index.mcfunction"), "a") as file:
         current_level = SCOREBOARD_SEARCH_TREE_DEPTH - 1
