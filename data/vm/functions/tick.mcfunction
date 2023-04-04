@@ -15,12 +15,12 @@ tag @a[scores={l=1..}] add lobby
 scoreboard players reset @a[scores={l=1..}] l
 scoreboard players enable @a l
 
-item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] armor.chest with elytra{Damage: 430,vm:doublejump}
+item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] armor.chest with elytra{Damage:430,doublejump:1b}
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejumpTimer
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejump
 effect give @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] levitation 1 11 true
 execute as @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] at @s run playsound minecraft:entity.cat.hiss master @s ~ ~ ~
-clear @a[nbt={Inventory:[{id:"minecraft:elytra",tag: {vm:"doublejump"}}]},scores={doublejumpTimer=10..}] minecraft:elytra{vm:doublejump}
+clear @a[nbt={Inventory:[{id:"minecraft:elytra",tag:{doublejump:1b}}]},scores={doublejumpTimer=10..}] minecraft:elytra{doublejump:1b}
 
 execute as @e[type=chest_minecart,tag=lobby_gui] store result score @s temp run data get entity @s Items
 execute as @e[type=chest_minecart,tag=lobby_gui] unless score @s temp = @s value run function vm:gui/click
