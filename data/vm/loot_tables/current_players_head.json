@@ -7,8 +7,6 @@
           {
             "type": "item",
             "name": "minecraft:player_head",
-            "weight": 1000,
-            "quality": -1000,
             "functions": [
               {
                 "function": "minecraft:fill_player_head",
