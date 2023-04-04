@@ -1,4 +1,4 @@
 function vm:leave
-tag @s add waiting
+tag @s remove lobby
 effect clear @s
 clear @s
