@@ -2,6 +2,7 @@ function api:players/get/current
 
 loot spawn ~ ~ ~ loot vm:current_players_head
 data modify storage api:players current.name set from entity @e[type=item,distance=..2,sort=nearest,limit=1] Item.tag.SkullOwner.Name
+kill @e[type=item,distance=..2,sort=nearest,limit=1]
 
 data modify storage api:ranks playerName.selected set from storage api:players current.name
 
@@ -19,6 +20,5 @@ execute if score @s rank = #admin_rank value run data modify block ~ ~ ~ Text1 s
 data modify storage api:players current.display.rank set from block ~ ~ ~ Text1
 data modify block ~ ~ ~ Text1 set value '{"storage":"api:ranks","nbt":"playerName.selected","color":"white"}'
 data modify storage api:players current.display.white set from block ~ ~ ~ Text1
-kill @e[type=item,distance=..2,sort=nearest,limit=1]
 
 function api:players/save/current

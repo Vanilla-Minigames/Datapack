@@ -1,5 +1,7 @@
 {
 	"values":[
-	  	"vm:info"
+	  	"vm:info",
+		"api:common/init",
+		"api:ranks/load"
 	]
 }

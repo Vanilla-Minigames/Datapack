@@ -46,6 +46,7 @@ bossbar set vm:tps style notched_20
 bossbar set vm:tps max 20
 bossbar set vm:tps visible true
 function vm:tps
+setblock 0 0 0 birch_sign replace
 
 team add 10admin {"text":"Admin","color":"red"}
 team modify 10admin color gray
