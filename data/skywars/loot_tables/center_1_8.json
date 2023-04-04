@@ -1,0 +1,300 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 3,
+        "max": 7
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "stone",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				"min": 10,
+				"max": 50
+			  }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "snowball",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				"min": 3,
+				"max": 12
+			  }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "water_bucket",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "lava_bucket",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "arrow",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				"min": 1,
+				"max": 4
+			  }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "iron_sword",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "diamond_sword",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "stone_sword",
+          "weight": 11,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "shield",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "iron_pickaxe",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 5,
+                "max": 25
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "diamond_pickaxe",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "iron_axe",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 2,
+                "max": 15
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "bow",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "iron_helmet",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "diamond_helmet",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "iron_chestplate",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 0,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "diamond_chestplate",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "iron_leggings",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 1,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "diamond_leggings",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 0,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "diamond_boots",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 0,
+                "max": 9
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "golden_apple",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "ender_pearl",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "fishing_rod",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "experience_bottle",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				"min": 5,
+				"max": 15
+			  }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "lapis_lazuli",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				"min": 3,
+				"max": 10
+			  }
+            }
+          ]
+        },
+		{
+          "type": "item",
+          "name": "book",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "min": 0,
+                "max": 11
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 12,
+                "max": 45
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:apple",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

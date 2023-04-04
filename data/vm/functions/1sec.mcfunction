@@ -1,5 +1,5 @@
 effect give @a[tag=lobby,gamemode=!creative,gamemode=!spectator] saturation 200 255 true
-effect give @a[tag=lobby,gamemode=!creative,gamemode=!spectator] weakness 10 255 true
+effect give @a[tag=!skywars,gamemode=!creative,gamemode=!spectator] weakness 10 255 true
 spawnpoint @a[tag=lobby] 0 19 0 90
 
 execute if entity @a[team=70rainbow] if score #rainbow temp matches 1 run team modify 70rainbow prefix [{"text":"[","color":"white"},{"text":"R","color":"red"},{"text":"a","color":"gold"},{"text":"i","color":"yellow"},{"text":"n","color":"green"},{"text":"b","color":"aqua"},{"text":"o","color":"light_purple"},{"text":"w","color":"dark_purple"},{"text":"] "}]
@@ -11,5 +11,8 @@ execute if entity @a[team=70rainbow] if score #rainbow temp matches 6 run team m
 execute if entity @a[team=70rainbow] if score #rainbow temp matches 7 run team modify 70rainbow prefix [{"text":"[","color":"white"},{"text":"R","color":"dark_purple"},{"text":"a","color":"red"},{"text":"i","color":"gold"},{"text":"n","color":"yellow"},{"text":"b","color":"green"},{"text":"o","color":"aqua"},{"text":"w","color":"red"},{"text":"] "}]
 execute if entity @a[team=70rainbow] run scoreboard players add #rainbow temp 1
 execute if score #rainbow temp matches 8.. run scoreboard players set #rainbow temp 1
+
+xp add @a[tag=xpcountdown] -1 levels
+tag @a[tag=xpcountdown,level=0] remove xpcountdown
 
 schedule function vm:1sec 1s
