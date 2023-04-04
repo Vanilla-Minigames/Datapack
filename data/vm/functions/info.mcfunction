@@ -14,6 +14,7 @@ scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game
 scoreboard objectives add deaths deathCount
 scoreboard objectives add kills totalKillCount
 scoreboard objectives add doublejump minecraft.custom:minecraft.jump
+scoreboard objectives add doublejumpTimer minecraft.custom:minecraft.play_time
 
 gamerule doMobSpawning false
 gamerule commandModificationBlockLimit 655360
