@@ -7,6 +7,7 @@ scoreboard objectives add value dummy
 scoreboard objectives add temp dummy
 scoreboard objectives add l trigger {"text":"Hub","color":"gold"}
 scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
+scoreboard objectives add partyID dummy
 scoreboard objectives add playtime dummy
 scoreboard objectives add apply_damage dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game

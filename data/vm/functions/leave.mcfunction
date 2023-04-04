@@ -1,6 +1,7 @@
 tag @s remove skywars
 tag @s remove skywarswait
 
+title @s actionbar ""
 effect clear @s
 clear @s
 

@@ -1,6 +1,6 @@
 execute in skywars:1_16/1 store result score #skywars_1_16 temp if entity @a[distance=0.01..,tag=skywars]
-scoreboard players set #skywarswait_1_16 temp 2
-#execute in skywars:1_16/1 store result score #skywarswait_1_16 temp if entity @a[tag=skywarswait]
+#/data modify storage skywars:maps_1_16 free append value {id:1,teams:4}
+execute store result score #skywarswait_1_16 temp if entity @a[tag=skywarswait]
 execute if score #skywarswait_1_16 temp matches 0..1 run scoreboard players set #skywarsstart_1_16 value 0
 execute if score #skywarswait_1_16 temp matches 1 run title @a[tag=skywarswait] actionbar {"text":"Waiting for at least one more player...","color":"yellow"}
 execute if score #skywarswait_1_16 temp matches 2.. if score #skywarsstart_1_16 value matches 0 store result score #availablemaps temp if data storage skywars:maps_1_16 free[]
