@@ -1,4 +1,6 @@
-tag @s add lobby
+tag @s remove skywars
+tag @s remove skywarswait
+
 effect clear @s
 clear @s
 

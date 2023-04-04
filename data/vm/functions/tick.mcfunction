@@ -10,7 +10,8 @@ scoreboard players add @a playtime 1
 execute as @a[scores={l=1..}] run function vm:leave
 tp @a[scores={l=1..}] 0 19 0
 execute as @a[scores={l=1..}] run gamemode adventure @s
-item replace entity @a[scores={l=1..}] hotbar.4 with compass{display: {Name: '{"text":"§6§lMenu","color":"gold","bold":true,"italic":false}'}}
+item replace entity @a[scores={l=1..}] hotbar.4 with compass{display:{Name:'{"text":"§6§lMenu","color":"gold","bold":true,"italic":false}'}}
+tag @a[scores={l=1..}] add lobby
 scoreboard players reset @a[scores={l=1..}] l
 scoreboard players enable @a l
 
@@ -20,6 +21,10 @@ effect give @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] levitation 1 1
 execute as @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] at @s run playsound minecraft:entity.cat.hiss master @s ~ ~ ~
 execute as @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] run item replace entity @s armor.chest with air
 
-execute as @e[type=chest_minecart,tag=lobby_gui] store result score @s itemCount run data get entity @s Items
-execute as @e[type=chest_minecart,tag=lobby_gui] unless score @s itemCount = @s itemOrgCount run function vm:gui/click
+execute as @e[type=chest_minecart,tag=lobby_gui] store result score @s temp run data get entity @s Items
+execute as @e[type=chest_minecart,tag=lobby_gui] unless score @s temp = @s value run function vm:gui/click
+
+execute if entity @a[tag=skywars] run function skywars:tick
+execute if entity @a[tag=skywarswait] run function skywars:tick
+
 schedule function vm:tick 1t

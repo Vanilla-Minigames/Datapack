@@ -5,9 +5,8 @@ scoreboard objectives setdisplay list ID
 scoreboard objectives add rank dummy
 scoreboard objectives add value dummy
 scoreboard objectives add temp dummy
-scoreboard objectives add itemCount dummy
-scoreboard objectives add itemOrgCount dummy
-scoreboard objectives add l trigger
+scoreboard objectives add l trigger {"text":"Hub","color":"gold"}
+scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
 scoreboard objectives add playtime dummy
 scoreboard objectives add apply_damage dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game
@@ -45,6 +44,7 @@ bossbar add vm:tps {"text":""}
 bossbar set vm:tps style notched_20
 bossbar set vm:tps max 20
 bossbar set vm:tps visible true
+function vm:tps
 
 team add 10admin {"text":"Admin","color":"red"}
 team modify 10admin color gray
