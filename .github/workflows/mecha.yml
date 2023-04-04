@@ -7,6 +7,7 @@ jobs:
   Mecha:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: mcbeet/check-commands@v1
         with:
           source: .
