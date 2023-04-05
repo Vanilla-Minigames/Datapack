@@ -4,8 +4,6 @@ execute as @a[tag=skywars,nbt={OnGround: 0b}] store result score @s apply_damage
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players remove @s apply_damage 3
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run function vm:damage
 
-spawnpoint @a[tag=lobby,nbt={Dimension:"minecraft:overworld"}] 0 19 0
-
 execute as @a[scores={l=1..}] run function vm:leave
 tp @a[scores={l=1..}] 0 19 0
 execute as @a[scores={l=1..}] run gamemode adventure @s
@@ -17,8 +15,8 @@ scoreboard players enable @a l
 item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] armor.chest with elytra{Damage:430,doublejump:1b}
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejumpTimer
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejump
-effect give @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] levitation 1 11 true
-execute as @a[tag=lobby,gamemode=adventure,nbt={FallFlying: 1b}] at @s run playsound minecraft:entity.cat.hiss master @s ~ ~ ~
+effect give @a[tag=lobby,gamemode=adventure,nbt={FallFlying:1b}] levitation 1 11 true
+execute as @a[tag=lobby,gamemode=adventure,nbt={FallFlying:1b}] at @s run playsound minecraft:entity.cat.hiss master @s ~ ~ ~
 clear @a[nbt={Inventory:[{id:"minecraft:elytra",tag:{doublejump:1b}}]},scores={doublejumpTimer=10..}] minecraft:elytra{doublejump:1b}
 
 execute as @e[type=chest_minecart,tag=lobby_gui] store result score @s temp run data get entity @s Items

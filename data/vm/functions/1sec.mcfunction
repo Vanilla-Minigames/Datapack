@@ -13,6 +13,7 @@ execute if entity @a[team=70rainbow] run scoreboard players add #rainbow temp 1
 execute if score #rainbow temp matches 8.. run scoreboard players set #rainbow temp 1
 
 xp add @a[tag=xpcountdown] -1 levels
+#execute as @a[tag=xpcountdown,level=1] at @s run playsound minecraft.entity. master @s ~ ~ ~
 tag @a[tag=xpcountdown,level=0] remove xpcountdown
 
 pardon TomatoCake
