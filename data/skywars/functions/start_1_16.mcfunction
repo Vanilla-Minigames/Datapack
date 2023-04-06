@@ -36,6 +36,9 @@ execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skyw
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skywarswait_1_16,tag=skywarsyellow] 13 4 46
 execute if score #skywarsmap temp matches 1 in skywars:1_16/1 run tp @a[tag=skywarswait_1_16,tag=skywarsgreen] -15 4 43
 
+scoreboard players operation @a[tag=skywarswait_1_16] map = #skywarsmap temp
+effect clear @a[tag=skywarswait_1_16]
+clear @a[tag=skywarswait_1_16]
 scoreboard players set #skywarsstart_1_16 value 0
 tag @a[tag=skywarswait_1_16] add skywars
 execute as @a[tag=skywarswait_1_16] run gamemode survival @s

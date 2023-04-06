@@ -5,8 +5,12 @@ tag @s remove skywarsyellow
 tag @s remove skywarsgreen
 tag @s remove skywarswait_1_8
 tag @s remove skywarswait_1_16
+tag @s remove nohitcooldown
 
 title @s actionbar ""
+xp set @s 0 levels
+xp set @s 0 points
+scoreboard players reset @s xpcountdown
 effect clear @s
 clear @s
 

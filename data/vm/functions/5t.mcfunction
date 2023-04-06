@@ -15,8 +15,17 @@ tellraw @a[scores={Party=-1}] [{"text":"[","color":"gray"},{"text":"Party","colo
 scoreboard players set @a Party -2
 scoreboard players enable @a Party
 
-execute as @a[gamemode=!adventure,tag=!gm,tag=!skywars] run gamemode adventure @s
+execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars] run gamemode adventure @s
+execute as @a[tag=nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 100
+execute as @a[tag=!nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 4
+
+scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejumpTimer
+scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejump
+item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejumpTimer=20..100}] armor.chest with air
 
 kill @e[type=tnt]
+kill @e[type=tnt_minecart]
+kill @e[type=wither]
+kill @e[type=ender_dragon]
 kill @e[type=end_crystal]
 schedule function vm:5t 5t

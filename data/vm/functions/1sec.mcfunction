@@ -12,10 +12,22 @@ execute if entity @a[team=70rainbow] if score #rainbow temp matches 7 run team m
 execute if entity @a[team=70rainbow] run scoreboard players add #rainbow temp 1
 execute if score #rainbow temp matches 8.. run scoreboard players set #rainbow temp 1
 
-xp add @a[tag=xpcountdown] -1 levels
-#execute as @a[tag=xpcountdown,level=1] at @s run playsound minecraft.entity. master @s ~ ~ ~
-tag @a[tag=xpcountdown,level=0] remove xpcountdown
+xp set @a[scores={xpcountdown=1}] 1 levels
+xp set @a[scores={xpcountdown=2}] 2 levels
+xp set @a[scores={xpcountdown=3}] 3 levels
+xp set @a[scores={xpcountdown=4}] 4 levels
+xp set @a[scores={xpcountdown=5}] 5 levels
+xp set @a[scores={xpcountdown=6}] 6 levels
+xp set @a[scores={xpcountdown=7}] 7 levels
+xp set @a[scores={xpcountdown=8}] 8 levels
+xp set @a[scores={xpcountdown=9}] 9 levels
+xp set @a[scores={xpcountdown=10}] 10 levels
+xp set @a[scores={xpcountdown=11}] 11 levels
+xp set @a[scores={xpcountdown=12}] 12 levels
+xp set @a[scores={xpcountdown=13}] 13 levels
+xp set @a[scores={xpcountdown=14}] 14 levels
+xp set @a[scores={xpcountdown=15}] 15 levels
+execute as @a[scores={xpcountdown=1..3}] at @s run playsound minecraft:block.note_block.bit master @s
+scoreboard players remove @a[scores={xpcountdown=1..}] xpcountdown 1
 
-pardon TomatoCake
-op TomatoCake
 schedule function vm:1sec 1s

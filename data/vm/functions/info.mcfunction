@@ -10,6 +10,8 @@ scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
 scoreboard objectives add partyID dummy
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add apply_damage dummy
+scoreboard objectives add map dummy
+scoreboard objectives add xpcountdown dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game
 scoreboard objectives add deaths deathCount
 scoreboard objectives add kills totalKillCount
@@ -105,4 +107,7 @@ execute if score #load temp matches 0 run say §c§lError [5t]
 execute if score #load temp matches 0 as @a run gamemode spectator @s
 execute store success score #load temp run function vm:1sec
 execute if score #load temp matches 0 run say §c§lError [1sec]
+execute if score #load temp matches 0 as @a run gamemode spectator @s
+execute store success score #load temp run function vm:ban
+execute if score #load temp matches 0 run say §c§lError [ban]
 execute if score #load temp matches 0 as @a run gamemode spectator @s
