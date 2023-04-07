@@ -12,6 +12,7 @@ execute if entity @a[team=70rainbow] if score #rainbow temp matches 7 run team m
 execute if entity @a[team=70rainbow] run scoreboard players add #rainbow temp 1
 execute if score #rainbow temp matches 8.. run scoreboard players set #rainbow temp 1
 
+xp set @a[scores={xpcountdown=0}] 0 levels
 xp set @a[scores={xpcountdown=1}] 1 levels
 xp set @a[scores={xpcountdown=2}] 2 levels
 xp set @a[scores={xpcountdown=3}] 3 levels
@@ -27,7 +28,8 @@ xp set @a[scores={xpcountdown=12}] 12 levels
 xp set @a[scores={xpcountdown=13}] 13 levels
 xp set @a[scores={xpcountdown=14}] 14 levels
 xp set @a[scores={xpcountdown=15}] 15 levels
-execute as @a[scores={xpcountdown=1..3}] at @s run playsound minecraft:block.note_block.bit master @s
-scoreboard players remove @a[scores={xpcountdown=1..}] xpcountdown 1
+execute as @a[scores={xpcountdown=0}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 100 2
+execute as @a[scores={xpcountdown=1..3}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 100 0.8
+scoreboard players remove @a[scores={xpcountdown=0..}] xpcountdown 1
 
 schedule function vm:1sec 1s
