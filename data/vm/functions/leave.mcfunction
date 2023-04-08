@@ -12,6 +12,7 @@ tag @s remove bedwarsyellow
 tag @s remove bedwarsgreen
 tag @s remove bedwarswait
 tag @s remove nohitcooldown
+tag @s remove lobby
 
 title @s actionbar ""
 xp set @s 0 levels

@@ -11,6 +11,7 @@ scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
 scoreboard objectives add partyID dummy
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add apply_damage dummy
+scoreboard objectives add votes dummy
 scoreboard objectives add map dummy
 scoreboard objectives add xpcountdown dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game

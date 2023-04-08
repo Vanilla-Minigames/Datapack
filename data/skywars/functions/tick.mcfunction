@@ -1,5 +1,3 @@
-execute in skywars:1_16/1 store result score #skywars_1_16 temp if entity @a[distance=0.01..,tag=skywars]
-
 execute store result score #skywarswait_1_8 temp if entity @a[tag=skywarswait_1_8]
 execute if score #skywarswait_1_8 temp matches 0..1 run scoreboard players set #skywarsstart_1_8 value 0
 execute if score #skywarswait_1_8 temp matches 1 run title @a[tag=skywarswait_1_8] actionbar {"text":"Waiting for at least one more player...","color":"yellow"}
