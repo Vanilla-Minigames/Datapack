@@ -13,7 +13,7 @@ We will provide a way for developers and players to create a temporary developme
 First, clone or download the repository. You can also directly create a fork of the repository and clone that one.
 
 ### Setting up the api for player stats & friend and party system
-In case you need the api, open a terminal and run `python scripts/generate.py`, which will generate the files needed for reading/storing/deleting data.
+In case you need the api, open a terminal and run `python scripts/api/generate.py`, which will generate the files needed for reading/storing/deleting data.
 Check [the docs for the api](data/api/docs/ReadMe.md) for more information on how to use it.
 
 ### Other setup
@@ -24,4 +24,11 @@ If you're using our development server, that's already done for you.
 | - | -
 | /trigger l | Leaves the current game and joins the lobby
 | /trigger Party | Shows all party commands and invites someone to your party
-| /trigger gm | Switches your gamemode (1 = creative, 2 = adventure, 3 = spectator)
+| /trigger gm | soon: Switches your gamemode (1 = creative, 2 = adventure, 3 = spectator)
+| /trigger Spec | soon: Without arguments, leaves the current game and switches your gamemode to spectator. With arguments, leaves the game teleports you to the player with the specified ID.
+
+## Credits
+This data pack uses the following libraries:
+- [Anticheat](https://github.com/DEVTomatoCake/Anticheat) by TomatoCake and RedestoneCrafter
+- API for storing data per player by [Meierschlumpf](https://github.com/Meierschlumpf)
+They're modified to fit the needs of this data pack.

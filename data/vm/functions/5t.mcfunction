@@ -21,7 +21,7 @@ execute as @a[tag=!nohitcooldown] run attribute @s minecraft:generic.attack_spee
 
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejumpTimer
 scoreboard players reset @a[tag=lobby,gamemode=adventure,scores={doublejump=1..}] doublejump
-item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejumpTimer=20..100}] armor.chest with air
+item replace entity @a[tag=lobby,gamemode=adventure,scores={doublejumpTimer=18..100}] armor.chest with air
 
 kill @e[type=tnt]
 kill @e[type=tnt_minecart]

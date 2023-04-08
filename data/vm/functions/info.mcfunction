@@ -5,6 +5,7 @@ scoreboard objectives setdisplay list ID
 scoreboard objectives add rank dummy
 scoreboard objectives add value dummy
 scoreboard objectives add temp dummy
+scoreboard objectives add timeout dummy {"text":"Tempban","color":"red"}
 scoreboard objectives add l trigger {"text":"Hub","color":"gold"}
 scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
 scoreboard objectives add partyID dummy
