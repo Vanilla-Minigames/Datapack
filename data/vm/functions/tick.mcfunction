@@ -22,5 +22,7 @@ execute as @e[type=chest_minecart,tag=lobby_gui] unless score @s temp = @s value
 execute if entity @a[tag=skywars] run function skywars:tick
 execute if entity @a[tag=skywarswait_1_8] run function skywars:tick
 execute if entity @a[tag=skywarswait_1_16] run function skywars:tick
+execute if entity @a[tag=bedwars] run function bedwars:tick
+execute if entity @a[tag=bedwarswait] run function bedwars:tick
 
 schedule function vm:tick 1t

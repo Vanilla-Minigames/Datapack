@@ -5,6 +5,12 @@ tag @s remove skywarsyellow
 tag @s remove skywarsgreen
 tag @s remove skywarswait_1_8
 tag @s remove skywarswait_1_16
+tag @s remove bedwars
+tag @s remove bedwarsred
+tag @s remove bedwarsblue
+tag @s remove bedwarsyellow
+tag @s remove bedwarsgreen
+tag @s remove bedwarswait
 tag @s remove nohitcooldown
 
 title @s actionbar ""

@@ -8,8 +8,6 @@ execute as @a[scores={rejoin=1..}] run tellraw @s [{"text":"Welcome back, ","col
 scoreboard players reset @a[scores={rejoin=1..}] rejoin
 
 execute at @a[tag=lobby,nbt={SelectedItem:{id:"minecraft:compass"}}] unless entity @e[type=chest_minecart,tag=lobby_gui,distance=..5] run function vm:gui/create
-execute as @e[type=chest_minecart,tag=gui] at @s unless entity @a[distance=..3] run tp @s ~ -120 ~
-execute as @e[type=chest_minecart,tag=gui] at @s unless entity @a[distance=..3] run kill @s
 
 tellraw @a[scores={Party=-1}] [{"text":"[","color":"gray"},{"text":"Party","color":"gold"},{"text":"] "},{"text":"All party commands:","color":"yellow"}]
 scoreboard players set @a Party -2

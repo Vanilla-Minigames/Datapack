@@ -1,0 +1,29 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"player": [],
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:chest_minecart",
+							"team": "gui",
+							"distance": {
+								"absolute": {
+									"min": 0,
+									"max": 5
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "bedwars:gui/tpdown"
+	}
+}

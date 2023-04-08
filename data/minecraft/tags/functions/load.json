@@ -2,6 +2,7 @@
 	"values":[
 	  	"vm:info",
 		"skywars:info",
+		"bedwars:info",
 		"anticheat:info",
 		"api:common/init",
 		"api:ranks/load"
