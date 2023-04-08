@@ -53,17 +53,10 @@ execute if block ~-.5 ~ ~.5 cobweb run scoreboard players set @s fly 0
 execute if block ~.5 ~ ~-.5 cobweb run scoreboard players set @s fly 0
 execute if block ~.5 ~ ~.5 cobweb run scoreboard players set @s fly 0
 
-execute if block ~ ~-1 ~ sand run scoreboard players remove @s flyM 10
-execute if block ~ ~-1 ~ gravel run scoreboard players remove @s flyM 10
-
 execute if entity @s[nbt={ActiveEffects:[{Id:25b}]}] run scoreboard players remove @s fly 44
 execute if entity @s[nbt={ActiveEffects:[{Amplifier:0b,Id:1b}]}] run scoreboard players remove @s fly 5
 execute if entity @s[nbt={ActiveEffects:[{Amplifier:1b,Id:1b}]}] run scoreboard players remove @s fly 10
 execute if entity @s[nbt={ActiveEffects:[{Amplifier:2b,Id:1b}]}] run scoreboard players remove @s fly 15
-
-execute if entity @s[nbt={ActiveEffects:[{Amplifier:0b,Id:1b}]}] run scoreboard players remove @s flyM 5
-execute if entity @s[nbt={ActiveEffects:[{Amplifier:1b,Id:1b}]}] run scoreboard players remove @s flyM 10
-execute if entity @s[nbt={ActiveEffects:[{Amplifier:2b,Id:1b}]}] run scoreboard players remove @s flyM 15
 
 execute if entity @s[nbt={ActiveEffects:[{Id:30b}],Inventory:[{Slot:100b,tag:{Enchantments:[{id:"minecraft:depth_strider"}]}}]}] run scoreboard players remove @s swim 48
 execute if entity @s[nbt={ActiveEffects:[{Id:30b}],Inventory:[{Slot:100b,tag:{Enchantments:[{id:"minecraft:depth_strider"}]}}]}] at @s unless block ~ ~-1 ~ water run scoreboard players remove @s dive 72
