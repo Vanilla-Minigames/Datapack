@@ -9,8 +9,8 @@ function api:uuid/check/compare_uuids
 
 execute if score #matches temp matches 1 store result score #foundId temp run data get storage api:uuid temp[0].id
 
-scoreboard players remove #lenght temp 1
+scoreboard players remove #length temp 1
 
 data remove storage api:uuid temp[0]
 
-execute unless score #lenght temp matches ..0 if score #matches temp matches 0 run function api:uuid/check/without_id/repeat
+execute unless score #length temp matches ..0 if score #matches temp matches 0 run function api:uuid/check/without_id/repeat
