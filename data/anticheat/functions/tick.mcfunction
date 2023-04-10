@@ -49,8 +49,8 @@ execute as @a[scores={fly=15..}] run tellraw @a[scores={rank=1..19}] [{"text":"[
 #execute as @a[scores={fly=15..}] at @e[type=marker,tag=susTM,sort=nearest,limit=1] if block ~ ~-1 ~ air run tp @s ~ ~ ~
 execute as @a[scores={fly=15..}] run scoreboard players remove @s fly 3
 
-execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=35..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] run tp @s @s
-execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=35..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] run tellraw @a[scores={rank=1..29}] [{"text":"["},{"text":"sus","color":"aqua"},{"text":"™","color":"gold"},{"text":"] ","color":"white"},{"selector":"@s"},{"text":" sendet zu viele Pakete! ","color":"dark_red"},{"text":"{lvl:1} ","color":"red"},{"text":"[run,sneak] ","color":"red"},{"score":{"name":"@s","objective":"run"},"color":"green"}]
+execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=36..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] run tp @s @s
+execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=36..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] run tellraw @a[scores={rank=1..29}] [{"text":"["},{"text":"sus","color":"aqua"},{"text":"™","color":"gold"},{"text":"] ","color":"white"},{"selector":"@s"},{"text":" sendet zu viele Pakete! ","color":"dark_red"},{"text":"{lvl:1} ","color":"red"},{"text":"[run,sneak] ","color":"red"},{"score":{"name":"@s","objective":"run"},"color":"green"}]
 
 execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=20..}] run tp @s @s
 tellraw @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=20..}] [{"text":"["},{"text":"sus","color":"aqua"},{"text":"™","color":"gold"},{"text":"] ","color":"white"},{"text":"Du sendest zu viele Pakete! ","color":"dark_red"},{"text":"{lvl:2}","color":"yellow"}]
@@ -64,12 +64,12 @@ execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=1..,
 tellraw @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=1..,run=1..}] [{"text":"["},{"text":"sus","color":"aqua"},{"text":"™","color":"gold"},{"text":"] ","color":"white"},{"text":"Du sendest zu viele Pakete! ","color":"dark_red"},{"text":"{lvl:4}","color":"dark_red"}]
 execute as @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=1..,run=1..}] run tellraw @a[scores={rank=1..29}] [{"text":"["},{"text":"sus","color":"aqua"},{"text":"™","color":"gold"},{"text":"] ","color":"white"},{"selector":"@s"},{"text":" sendet zu viele Pakete! ","color":"dark_red"},{"text":"{lvl:4} ","color":"dark_red"},{"text":"[run,walk,sneak]","color":"red"}]
 
-effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=35..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] slowness 1 255 true
-effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=35..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] jump_boost 1 244 true
+effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=36..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] slowness 1 255 true
+effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,run=36..},nbt=!{Inventory:[{Slot:101b,tag:{Enchantments:[{id:"minecraft:swift_sneak"}]}}]}] jump_boost 1 244 true
 effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=20..}] slowness 2 255 true
 effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=20..}] jump_boost 2 244 true
-effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,sneakcm=31..}] slowness 3 255 true
-effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,sneakcm=31..}] jump_boost 3 244 true
+effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,sneakcm=50..}] slowness 3 255 true
+effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,sneakcm=50..}] jump_boost 3 244 true
 effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=1..,run=1..}] slowness 4 244 true
 effect give @a[gamemode=!creative,gamemode=!spectator,scores={sneak=1..,walk=1..,run=1..}] jump_boost 4 244 true
 scoreboard players reset @a[scores={sneak=1..}] sneak

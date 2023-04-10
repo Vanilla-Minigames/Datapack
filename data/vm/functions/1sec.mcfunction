@@ -35,7 +35,7 @@ scoreboard players remove @a[scores={xpcountdown=0..}] xpcountdown 1
 execute as @a[distance=..30,tag=!lobby] run tellraw @a[scores={rank=1..19}] [{"selector":"@s"},{"text":" in lobby without lobby tag"}]
 execute as @a[distance=..30,tag=!lobby] run scoreboard players set @s l 1
 
-execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3] run tp @s ~ -120 ~
+execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3,nbt={SelectedItem:{id:"minecraft:compass"}}] run tp @s ~ -120 ~
 execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3] run kill @s
 execute as @e[type=chest_minecart,tag=gui,tag=bedwars] at @s unless entity @a[distance=..7] run tp @s ~ -120 ~
 execute as @e[type=chest_minecart,tag=gui,tag=bedwars] at @s unless entity @a[distance=..7] run kill @s

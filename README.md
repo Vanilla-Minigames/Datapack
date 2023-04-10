@@ -20,6 +20,15 @@ Check [the docs for the api](data/api/docs/ReadMe.md) for more information on ho
 If you're developing in a single player world, you likely want to run `/tag @s add gm` to be able to switch your gamemode without restrictions.
 If you're using our development server, that's already done for you.
 
+| Tag | Description
+| - | -
+| gm | Allows you to switch your gamemode without restrictions
+| debug | Displays error messages from the api
+| tps | Displays the current tps in a bossbar
+| joinme | Allows you to create JoinMes
+
+## Commands
+
 | Command | Description
 | - | -
 | /trigger l | Leaves the current game and joins the lobby

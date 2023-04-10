@@ -78,6 +78,7 @@ execute if score #skywarsmap temp matches 7 in skywars:1_8/7 run tp @a[tag=skywa
 execute if score #skywarsmap temp matches 7 in skywars:1_8/7 run tp @a[tag=skywarswait_1_8,tag=skywarsyellow] 1 9 27
 execute if score #skywarsmap temp matches 7 in skywars:1_8/7 run tp @a[tag=skywarswait_1_8,tag=skywarsgreen] -25 9 0
 
+scoreboard players add @a[tag=skywarswait_1_8] skywarsgames 1
 scoreboard players operation @a[tag=skywarswait_1_8] map = #skywarsmap temp
 effect clear @a[tag=skywarswait_1_8]
 clear @a[tag=skywarswait_1_8]

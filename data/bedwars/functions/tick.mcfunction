@@ -14,6 +14,8 @@ execute as @a[scores={bedwarskills=1..},tag=bedwars] run function vm:health
 execute as @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] if entity @a[scores={bedwarskills=1..},tag=bedwars] run tellraw @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Health of ","color":"aqua"},{"selector":"@a[scores={bedwarskills=1..},tag=bedwars]"},{"text":": ","color":"aqua"},{"nbt":"health","storage":"vm:health"}]
 scoreboard players set @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] l 1
 tag @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] remove bedwars
+scoreboard players add @a[tag=bedwars,scores={bedwarsdeath=1..}] bedwarsalldeath 1
+scoreboard players add @a[tag=bedwars,scores={bedwarskills=1..}] bedwarsallkills 1
 scoreboard players reset @a[scores={bedwarsdeath=1..}] bedwarsdeath
 scoreboard players reset @a[scores={bedwarskills=1..}] bedwarskills
 
@@ -46,19 +48,23 @@ execute if entity @a[tag=bedwars] run function bedwars:trap
 execute as @a[tag=bedwars,scores={bedwarsbreakred=1..}] at @s run tellraw @a[distance=0..] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"selector":"@s"},{"text":" broke the bed of team ","color":"aqua"},{"text":"Red","color":"red"},{"text":"!","color":"aqua"}]
 execute at @a[tag=bedwars,scores={bedwarsbreakred=1..}] run scoreboard players set @a[tag=bedwars,tag=bedwarsred,distance=0..] bedwarsCanRespawn 0
 execute at @a[tag=bedwars,scores={bedwarsbreakred=1..}] run title @a[tag=bedwars,tag=bedwarsred,distance=0..] title {"text":"You don't respawn anymore!","color":"red"}
+scoreboard players add @a[tag=bedwars,scores={bedwarsbreakred=1..}] bedwarsallbeds 1
 scoreboard players reset @a[scores={bedwarsbreakred=1..}] bedwarsbreakred
 
 execute as @a[tag=bedwars,scores={bedwarsbreakblue=1..}] at @s run tellraw @a[distance=0..] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"selector":"@s"},{"text":" broke the bed of team ","color":"aqua"},{"text":"Blue","color":"blue"},{"text":"!","color":"aqua"}]
 execute at @a[tag=bedwars,scores={bedwarsbreakblue=1..}] run scoreboard players set @a[tag=bedwars,tag=bedwarsblue,distance=0..] bedwarsCanRespawn 0
 execute at @a[tag=bedwars,scores={bedwarsbreakblue=1..}] run title @a[tag=bedwars,tag=bedwarsblue,distance=0..] title {"text":"You don't respawn anymore!","color":"red"}
+scoreboard players add @a[tag=bedwars,scores={bedwarsbreakblue=1..}] bedwarsallbeds 1
 scoreboard players reset @a[scores={bedwarsbreakblue=1..}] bedwarsbreakblue
 
 execute as @a[tag=bedwars,scores={bedwarsbreakyellow=1..}] at @s run tellraw @a[distance=0..] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"selector":"@s"},{"text":" broke the bed of team ","color":"aqua"},{"text":"Yellow","color":"yellow"},{"text":"!","color":"aqua"}]
 execute at @a[tag=bedwars,scores={bedwarsbreakyellow=1..}] run scoreboard players set @a[tag=bedwars,tag=bedwarsyellow,distance=0..] bedwarsCanRespawn 0
 execute at @a[tag=bedwars,scores={bedwarsbreakyellow=1..}] run title @a[tag=bedwars,tag=bedwarsyellow,distance=0..] title {"text":"You don't respawn anymore!","color":"red"}
+scoreboard players add @a[tag=bedwars,scores={bedwarsbreakyellow=1..}] bedwarsallbeds 1
 scoreboard players reset @a[scores={bedwarsbreakyellow=1..}] bedwarsbreakyellow
 
 execute as @a[tag=bedwars,scores={bedwarsbreakgreen=1..}] at @s run tellraw @a[distance=0..] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"selector":"@s"},{"text":" broke the bed of team ","color":"aqua"},{"text":"Green","color":"green"},{"text":"!","color":"aqua"}]
 execute at @a[tag=bedwars,scores={bedwarsbreakgreen=1..}] run scoreboard players set @a[tag=bedwars,tag=bedwarsgreen,distance=0..] bedwarsCanRespawn 0
 execute at @a[tag=bedwars,scores={bedwarsbreakgreen=1..}] run title @a[tag=bedwars,tag=bedwarsgreen,distance=0..] title {"text":"You don't respawn anymore!","color":"red"}
+scoreboard players add @a[tag=bedwars,scores={bedwarsbreakgreen=1..}] bedwarsallbeds 1
 scoreboard players reset @a[scores={bedwarsbreakgreen=1..}] bedwarsbreakgreen

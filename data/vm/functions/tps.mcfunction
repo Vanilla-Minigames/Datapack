@@ -5,4 +5,4 @@ bossbar set vm:tps players @a[tag=tps]
 
 debug start
 
-execute if entity @a[tag=tps] run schedule function vm:tps 25s
+execute if entity @a[tag=tps] run schedule function vm:tps 18s

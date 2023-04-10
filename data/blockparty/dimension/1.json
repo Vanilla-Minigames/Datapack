@@ -1,0 +1,15 @@
+{
+	"type": "vm:light",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"layers": [
+				{
+					"height": 1,
+					"block": "minecraft:air"
+				}
+			],
+			"biome": "minecraft:plains"
+		}
+	}
+}

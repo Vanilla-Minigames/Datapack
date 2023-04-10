@@ -11,3 +11,8 @@
 
 scoreboard objectives add skywarsdeath deathCount
 scoreboard objectives add skywarskills playerKillCount
+
+scoreboard objectives add skywarsgames dummy
+scoreboard objectives add skywarswins dummy
+scoreboard objectives add skywarsalldeath dummy
+scoreboard objectives add skywarsallkills dummy

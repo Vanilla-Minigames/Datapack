@@ -147,6 +147,7 @@ schedule function bedwars:spawn_iron 3s
 schedule function bedwars:spawn_gold 5s
 
 scoreboard players set @a[tag=bedwarswait] bedwarsCanRespawn 1
+scoreboard players add @a[tag=bedwarswait] bedwarsgames 1
 scoreboard players operation @a[tag=bedwarswait] map = #bedwarsmap temp
 effect clear @a[tag=bedwarswait]
 clear @a[tag=bedwarswait]

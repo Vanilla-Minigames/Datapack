@@ -21,3 +21,9 @@ scoreboard objectives add bedwarscopper dummy
 scoreboard objectives add bedwarsiron dummy
 scoreboard objectives add bedwarsgold dummy
 scoreboard objectives add bedwarsCanRespawn dummy
+
+scoreboard objectives add bedwarsgames dummy
+scoreboard objectives add bedwarswins dummy
+scoreboard objectives add bedwarsallbeds dummy
+scoreboard objectives add bedwarsalldeath dummy
+scoreboard objectives add bedwarsallkills dummy

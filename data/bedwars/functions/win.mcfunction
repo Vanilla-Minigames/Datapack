@@ -6,6 +6,8 @@ execute if entity @s[tag=bedwarsgreen] as @a if score @s map = @r[tag=bedwarsgre
 scoreboard players set @a[tag=bedwars,distance=0..] l 1
 tag @s remove temp
 
+scoreboard players add @s bedwarswins 1
+
 data modify storage bedwars:maps free append value {id:0,teams:4}
 execute if score @s map matches 3 run data modify storage bedwars:maps free[-1].teams set value 2
 execute store result storage bedwars:maps free[-1].id int 1 run scoreboard players get @s map

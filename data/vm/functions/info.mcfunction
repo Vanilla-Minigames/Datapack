@@ -7,11 +7,14 @@ scoreboard objectives add value dummy
 scoreboard objectives add temp dummy
 scoreboard objectives add timeout dummy {"text":"Tempban","color":"red"}
 scoreboard objectives add l trigger {"text":"Hub","color":"gold"}
+scoreboard objectives add Help trigger {"text":"Help","color":"gold"}
 scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
+scoreboard objectives add JoinMe trigger {"text":"JoinMe","color":"gold"}
 scoreboard objectives add partyID dummy
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add apply_damage dummy
 scoreboard objectives add votes dummy
+scoreboard objectives add coins dummy {"text":"Coins","color":"gold"}
 scoreboard objectives add crates dummy
 scoreboard objectives add map dummy
 scoreboard objectives add xpcountdown dummy

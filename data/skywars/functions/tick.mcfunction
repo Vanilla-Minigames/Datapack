@@ -24,6 +24,8 @@ execute as @a[scores={skywarskills=1..},tag=skywars] run function vm:health
 execute as @a[scores={skywarsdeath=1..},tag=skywars] if entity @a[scores={skywarskills=1..},tag=skywars] run tellraw @a[scores={skywarsdeath=1..},tag=skywars] [{"text":"[","color":"gray"},{"text":"SkyWars","color":"yellow"},{"text":"] "},{"text":"Health of ","color":"aqua"},{"selector":"@a[scores={skywarskills=1..},tag=skywars]"},{"text":": ","color":"aqua"},{"nbt":"health","storage":"vm:health"}]
 scoreboard players set @a[scores={skywarsdeath=1..},tag=skywars] l 1
 tag @a[scores={skywarsdeath=1..},tag=skywars] remove skywars
+scoreboard players add @a[tag=skywars,scores={skywarsdeath=1..}] skywarsalldeath 1
+scoreboard players add @a[tag=skywars,scores={skywarskills=1..}] skywarsallkills 1
 scoreboard players reset @a skywarsdeath
 scoreboard players reset @a skywarskills
 
