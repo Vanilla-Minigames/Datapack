@@ -29,6 +29,7 @@ team join Blue @a[tag=bedwarswait,tag=bedwarsblue]
 team join Yellow @a[tag=bedwarswait,tag=bedwarsyellow]
 team join Green @a[tag=bedwarswait,tag=bedwarsgreen]
 
+execute if score #bedwarsmap temp matches 1 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Willithepig","color":"gold"}]
 execute if score #bedwarsmap temp matches 1 in bedwars:1 if loaded 0 0 0 run function bedwars:reset/1
 execute if score #bedwarsmap temp matches 1 in bedwars:1 unless loaded 0 0 0 run schedule function bedwars:reset/1 2s
 execute if score #bedwarsmap temp matches 1 in bedwars:1 run tp @a[tag=bedwarswait,tag=bedwarsred] -27 4 0
@@ -40,6 +41,7 @@ execute if score #bedwarsmap temp matches 1 in bedwars:1 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 1 in bedwars:1 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 27 4 0
 execute if score #bedwarsmap temp matches 1 in bedwars:1 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 0 4 27
 
+execute if score #bedwarsmap temp matches 2 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Nightshade_09 & LULL1","color":"gold"}]
 execute if score #bedwarsmap temp matches 2 in bedwars:2 if loaded 0 0 0 run function bedwars:reset/2
 execute if score #bedwarsmap temp matches 2 in bedwars:2 unless loaded 0 0 0 run schedule function bedwars:reset/2 2s
 execute if score #bedwarsmap temp matches 2 in bedwars:2 run tp @a[tag=bedwarswait,tag=bedwarsred] -48 8 0
@@ -51,6 +53,7 @@ execute if score #bedwarsmap temp matches 2 in bedwars:2 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 2 in bedwars:2 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 48 8 0
 execute if score #bedwarsmap temp matches 2 in bedwars:2 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 0 8 48
 
+execute if score #bedwarsmap temp matches 3..4 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"DomBuilder","color":"gold"}]
 execute if score #bedwarsmap temp matches 3 in bedwars:3 if loaded 0 0 0 run function bedwars:reset/3
 execute if score #bedwarsmap temp matches 3 in bedwars:3 unless loaded 0 0 0 run schedule function bedwars:reset/3 2s
 execute if score #bedwarsmap temp matches 3 in bedwars:3 run tp @a[tag=bedwarswait,tag=bedwarsred] -31 26 0.0
@@ -69,6 +72,7 @@ execute if score #bedwarsmap temp matches 4 in bedwars:4 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 4 in bedwars:4 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 0 13 -29
 execute if score #bedwarsmap temp matches 4 in bedwars:4 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 29 13 0
 
+execute if score #bedwarsmap temp matches 5..6 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Koljav","color":"gold"}]
 execute if score #bedwarsmap temp matches 5 in bedwars:5 if loaded 0 0 0 run function bedwars:reset/5
 execute if score #bedwarsmap temp matches 5 in bedwars:5 unless loaded 0 0 0 run schedule function bedwars:reset/5 2s
 execute if score #bedwarsmap temp matches 5 in bedwars:5 run tp @a[tag=bedwarswait,tag=bedwarsred] -3 8 28
@@ -91,6 +95,7 @@ execute if score #bedwarsmap temp matches 6 in bedwars:6 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 6 in bedwars:6 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] -35 7 0
 execute if score #bedwarsmap temp matches 6 in bedwars:6 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 0 7 -35
 
+execute if score #bedwarsmap temp matches 7 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"EtwasMagWurst","color":"gold"}]
 execute if score #bedwarsmap temp matches 7 in bedwars:7 if loaded 0 0 0 run function bedwars:reset/7
 execute if score #bedwarsmap temp matches 7 in bedwars:7 unless loaded 0 0 0 run schedule function bedwars:reset/7 2s
 execute if score #bedwarsmap temp matches 7 in bedwars:7 run tp @a[tag=bedwarswait,tag=bedwarsred] -30 4 0
@@ -102,6 +107,7 @@ execute if score #bedwarsmap temp matches 7 in bedwars:7 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 7 in bedwars:7 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 30 4 0
 execute if score #bedwarsmap temp matches 7 in bedwars:7 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 0 4 30
 
+execute if score #bedwarsmap temp matches 8..9 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Tim07iju","color":"gold"}]
 execute if score #bedwarsmap temp matches 8 in bedwars:8 if loaded 0 0 0 run function bedwars:reset/8
 execute if score #bedwarsmap temp matches 8 in bedwars:8 unless loaded 0 0 0 run schedule function bedwars:reset/8 2s
 execute if score #bedwarsmap temp matches 8 in bedwars:8 run tp @a[tag=bedwarswait,tag=bedwarsred] -32 8 0
@@ -124,10 +130,23 @@ execute if score #bedwarsmap temp matches 9 in bedwars:9 run spawnpoint @a[tag=b
 execute if score #bedwarsmap temp matches 9 in bedwars:9 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 29 6 1
 execute if score #bedwarsmap temp matches 9 in bedwars:9 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 1 6 29
 
+execute if score #bedwarsmap temp matches 10 run tellraw @a[tag=bedwarswait] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Blockcrafter_GER","color":"gold"}]
+execute if score #bedwarsmap temp matches 10 in bedwars:10 if loaded 0 0 0 run function bedwars:reset/10
+execute if score #bedwarsmap temp matches 10 in bedwars:10 unless loaded 0 0 0 run schedule function bedwars:reset/10 2s
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run tp @a[tag=bedwarswait,tag=bedwarsred] 0 10 28
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run tp @a[tag=bedwarswait,tag=bedwarsblue] -28 10 0
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run tp @a[tag=bedwarswait,tag=bedwarsyellow] 0 10 -28
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run tp @a[tag=bedwarswait,tag=bedwarsgreen] 28 10 0
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run spawnpoint @a[tag=bedwarswait,tag=bedwarsred] 0 10 28
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run spawnpoint @a[tag=bedwarswait,tag=bedwarsblue] -28 10 0
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run spawnpoint @a[tag=bedwarswait,tag=bedwarsyellow] 0 10 -28
+execute if score #bedwarsmap temp matches 10 in bedwars:10 run spawnpoint @a[tag=bedwarswait,tag=bedwarsgreen] 28 10 0
+
 schedule function bedwars:spawn_copper 2s append
 schedule function bedwars:spawn_iron 3s
 schedule function bedwars:spawn_gold 5s
 
+scoreboard players set @a[tag=bedwarswait] bedwarsCanRespawn 1
 scoreboard players operation @a[tag=bedwarswait] map = #bedwarsmap temp
 effect clear @a[tag=bedwarswait]
 clear @a[tag=bedwarswait]

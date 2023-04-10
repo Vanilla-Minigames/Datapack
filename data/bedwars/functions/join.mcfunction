@@ -14,3 +14,4 @@ execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp match
 execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 7 in bedwars:7 run tp @s 0 50 0
 execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 8 in bedwars:8 run tp @s 0 50 0
 execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 9 in bedwars:9 run tp @s 0 50 0
+execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 10 in bedwars:10 run tp @s 0 50 0

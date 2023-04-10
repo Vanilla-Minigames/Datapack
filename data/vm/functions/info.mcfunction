@@ -12,6 +12,7 @@ scoreboard objectives add partyID dummy
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add apply_damage dummy
 scoreboard objectives add votes dummy
+scoreboard objectives add crates dummy
 scoreboard objectives add map dummy
 scoreboard objectives add xpcountdown dummy
 scoreboard objectives add rejoin minecraft.custom:minecraft.leave_game
@@ -103,6 +104,9 @@ team modify Yellow color yellow
 team add Green {"text":"Green","color":"green"}
 team modify Green friendlyFire false
 team modify Green color green
+
+kill @e[type=interaction,tag=lobby_crate]
+summon interaction 30 13 -9 {Tags:["lobby_crate"],width:1.03f,height:1.03f,response:1b}
 
 execute store success score #load temp run function vm:tick
 execute if score #load temp matches 0 run say §c§lError [Tick]

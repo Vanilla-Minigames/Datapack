@@ -46,5 +46,9 @@ execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item 2 6 
 execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item 30 6 2 {Item:{id:"copper_ingot",Count:1b}}
 execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item -1 6 30 {Item:{id:"copper_ingot",Count:1b}}
 execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item -30 6 -1 {Item:{id:"copper_ingot",Count:1b}}
+execute in bedwars:10 if entity @a[tag=bedwars,distance=0..] run summon item 33 10 3 {Item:{id:"copper_ingot",Count:1b}}
+execute in bedwars:10 if entity @a[tag=bedwars,distance=0..] run summon item -3 10 33 {Item:{id:"copper_ingot",Count:1b}}
+execute in bedwars:10 if entity @a[tag=bedwars,distance=0..] run summon item -33 10 -3 {Item:{id:"copper_ingot",Count:1b}}
+execute in bedwars:10 if entity @a[tag=bedwars,distance=0..] run summon item 3 10 -33 {Item:{id:"copper_ingot",Count:1b}}
 
 execute if entity @a[tag=bedwars] run schedule function bedwars:spawn_copper 25t

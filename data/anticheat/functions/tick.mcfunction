@@ -19,12 +19,6 @@ execute as @a[nbt={FallFlying:1b}] run scoreboard players set @s fly 0
 
 execute as @e[type=marker,tag=susTM] at @s if block ~ ~-1 ~ slime_block run scoreboard players set @p[gamemode=!creative,gamemode=!spectator] fly 10
 execute as @e[type=marker,tag=susTM] at @s if block ~ ~-1 ~ slime_block run tp @s @p[gamemode=!creative,gamemode=!spectator]
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ air if block ~ ~ ~ air run tellraw @a[scores={rank=1..29}] [{"text":"[sus™] ","color":"gray"},{"selector":"@s"},{"text":" was flagged {Safewalk}"}]
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ air if block ~ ~ ~ air run tp @s @s
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ water if block ~ ~ ~ air run tellraw @a[scores={rank=1..29}] [{"text":"[sus™] ","color":"gray"},{"selector":"@s"},{"text":" was flagged {Safewalk}"}]
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ water if block ~ ~ ~ air run tp @s @s
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ lava if block ~ ~ ~ air run tellraw @a[scores={rank=1..29}] [{"text":"[sus™] ","color":"gray"},{"selector":"@s"},{"text":" was flagged {Safewalk}"}]
-execute as @a[scores={walk=3}] at @s if block ~ ~-1 ~ lava if block ~ ~ ~ air run tp @s @s
 
 scoreboard players set @a[scores={acdamage=1..19}] acdamage 50
 scoreboard players reset @a[scores={acdamage=20..21}] acdamage

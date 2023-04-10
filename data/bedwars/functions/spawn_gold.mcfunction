@@ -24,5 +24,6 @@ execute in bedwars:8 if entity @a[tag=bedwars,distance=0..] run summon item 1 4 
 execute in bedwars:8 if entity @a[tag=bedwars,distance=0..] run summon item 1 4 1 {Item:{id:"gold_ingot",Count:1b}}
 execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item 1 6 1 {Item:{id:"gold_ingot",Count:1b}}
 execute in bedwars:9 if entity @a[tag=bedwars,distance=0..] run summon item 0 6 0 {Item:{id:"gold_ingot",Count:1b}}
+execute in bedwars:10 if entity @a[tag=bedwars,distance=0..] run summon item 0 9 0 {Item:{id:"gold_ingot",Count:1b}}
 
 execute if entity @a[tag=bedwars] run schedule function bedwars:spawn_gold 10s
