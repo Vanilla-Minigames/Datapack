@@ -7,3 +7,4 @@ execute store result score #storage_uuid_3 temp run data get storage api:players
 function api:uuid/check/compare_uuids
 
 execute if score #matches temp matches 0 run function api:uuid/check/with_id/uuid_not_matches
+execute if score #matches temp matches 1 run function vm:join_server/main
