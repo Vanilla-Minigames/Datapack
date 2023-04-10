@@ -3,7 +3,7 @@
 	  	"vm:info",
 		"skywars:info",
 		"bedwars:info",
-		"anticheat:info",
+		"bingo:info",
 		"api:common/init",
 		"api:ranks/load"
 	]

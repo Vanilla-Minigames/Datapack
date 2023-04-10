@@ -1,5 +1,5 @@
 effect give @a[tag=lobby,gamemode=!creative,gamemode=!spectator] saturation infinite 0 true
-effect give @a[tag=!skywars,gamemode=!creative,gamemode=!spectator] weakness infinite 255 true
+effect give @a[gamemode=!creative,gamemode=!spectator,tag=!skywars,tag=!bedwars,tag=!bingo] weakness infinite 255 true
 spawnpoint @a[tag=lobby] 0 19 0 90
 
 execute if entity @a[team=70rainbow] if score #rainbow temp matches 1 run team modify 70rainbow prefix [{"text":"[","color":"white"},{"text":"R","color":"red"},{"text":"a","color":"gold"},{"text":"i","color":"yellow"},{"text":"n","color":"green"},{"text":"b","color":"aqua"},{"text":"o","color":"light_purple"},{"text":"w","color":"dark_purple"},{"text":"] "}]
@@ -34,6 +34,17 @@ scoreboard players remove @a[scores={xpcountdown=0..}] xpcountdown 1
 
 execute as @a[distance=..30,tag=!lobby] run tellraw @a[scores={rank=1..19}] [{"selector":"@s"},{"text":" in lobby without lobby tag"}]
 execute as @a[distance=..30,tag=!lobby] run scoreboard players set @s l 1
+
+execute as @a[name=booky10,tag=!uuid_migration] run function api:uuid/add
+execute as @a[name=booky10,tag=!uuid_migration] run tag @s add uuid_migration
+execute as @a[name=Benonardo,tag=!uuid_migration] run function api:uuid/add
+execute as @a[name=Benonardo,tag=!uuid_migration] run tag @s add uuid_migration
+execute as @a[name=Farbe_,tag=!uuid_migration] run function api:uuid/add
+execute as @a[name=Farbe_,tag=!uuid_migration] run tag @s add uuid_migration
+execute as @a[name=thevalleyy,tag=!uuid_migration] run function api:uuid/add
+execute as @a[name=thevalleyy,tag=!uuid_migration] run tag @s add uuid_migration
+execute as @a[name=0000000001000101,tag=!uuid_migration] run function api:uuid/add
+execute as @a[name=0000000001000101,tag=!uuid_migration] run tag @s add uuid_migration
 
 execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3,nbt={SelectedItem:{id:"minecraft:compass"}}] run tp @s ~ -120 ~
 execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3] run kill @s

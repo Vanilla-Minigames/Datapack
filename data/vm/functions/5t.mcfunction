@@ -15,7 +15,7 @@ execute as @a[scores={JoinMe=-1},tag=joinme,tag=!lobby] run function vm:joinme
 scoreboard players set @a JoinMe -2
 scoreboard players enable @a JoinMe
 
-execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars] run gamemode adventure @s
+execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars,tag=!bedwars,tag=!bingo] run gamemode adventure @s
 execute as @a[tag=nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 100
 execute as @a[tag=!nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 4
 

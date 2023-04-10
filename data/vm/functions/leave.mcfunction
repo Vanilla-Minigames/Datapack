@@ -12,6 +12,8 @@ tag @s remove bedwarsyellow
 tag @s remove bedwarsgreen
 tag @s remove bedwarswait
 tag @s remove nohitcooldown
+tag @s remove bingo
+tag @s remove bingowait
 tag @s remove lobby
 
 title @s actionbar ""

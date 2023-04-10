@@ -1,7 +1,9 @@
 execute as @a[tag=!registered] run function vm:join_server/first
 execute as @a[scores={rejoin=1..}] run function vm:join_server/index
 
-execute as @a[tag=skywars,nbt={OnGround: 0b}] store result score @s apply_damage run data get entity @s FallDistance
+execute as @a[tag=skywars,nbt={OnGround:0b}] store result score @s apply_damage run data get entity @s FallDistance
+execute as @a[tag=bedwars,nbt={OnGround:0b}] store result score @s apply_damage run data get entity @s FallDistance
+execute as @a[tag=bingo,nbt={OnGround:0b}] store result score @s apply_damage run data get entity @s FallDistance
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players remove @s apply_damage 3
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run function vm:damage
 
@@ -25,5 +27,7 @@ execute if entity @a[tag=skywarswait_1_8] run function skywars:tick
 execute if entity @a[tag=skywarswait_1_16] run function skywars:tick
 execute if entity @a[tag=bedwars] run function bedwars:tick
 execute if entity @a[tag=bedwarswait] run function bedwars:tick
+execute if entity @a[tag=bingo] run function bingo:tick
+execute if entity @a[tag=bingowait] run function bingo:tick
 
 schedule function vm:tick 1t

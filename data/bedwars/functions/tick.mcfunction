@@ -14,19 +14,19 @@ execute as @a[scores={bedwarskills=1..},tag=bedwars] run function vm:health
 execute as @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] if entity @a[scores={bedwarskills=1..},tag=bedwars] run tellraw @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Health of ","color":"aqua"},{"selector":"@a[scores={bedwarskills=1..},tag=bedwars]"},{"text":": ","color":"aqua"},{"nbt":"health","storage":"vm:health"}]
 scoreboard players set @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] l 1
 tag @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=0},tag=bedwars] remove bedwars
+execute as @a[scores={bedwarsdeath=1..,bedwarsCanRespawn=1..},tag=bedwars] run clear @s
 scoreboard players add @a[tag=bedwars,scores={bedwarsdeath=1..}] bedwarsalldeath 1
 scoreboard players add @a[tag=bedwars,scores={bedwarskills=1..}] bedwarsallkills 1
 scoreboard players reset @a[scores={bedwarsdeath=1..}] bedwarsdeath
 scoreboard players reset @a[scores={bedwarskills=1..}] bedwarskills
 
-#execute as @a[tag=bedwars,tag=bedwarsred] at @s unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
-#execute as @a[tag=bedwars,tag=bedwarsblue] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
-#execute as @a[tag=bedwars,tag=bedwarsyellow] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
-#execute as @a[tag=bedwars,tag=bedwarsgreen] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] run function bedwars:win
+execute as @a[tag=bedwars,tag=bedwarsred] at @s unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
+execute as @a[tag=bedwars,tag=bedwarsblue] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
+execute as @a[tag=bedwars,tag=bedwarsyellow] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsgreen,distance=0.01..] run function bedwars:win
+execute as @a[tag=bedwars,tag=bedwarsgreen] at @s unless entity @a[tag=bedwars,tag=bedwarsred,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsblue,distance=0.01..] unless entity @a[tag=bedwars,tag=bedwarsyellow,distance=0.01..] run function bedwars:win
 
 execute at @e[type=villager,tag=bedwars] if entity @a[tag=bedwars,distance=..7] unless entity @e[type=chest_minecart,tag=bedwars,distance=..2] run function bedwars:gui/summon
-execute as @e[type=chest_minecart,tag=gui_used,tag=bedwars] store result score @s temp run data get entity @s Items
-execute as @e[type=chest_minecart,tag=gui_used,tag=bedwars] unless score @s temp = @s value at @s run function bedwars:gui/click
+execute as @e[type=chest_minecart,tag=gui_used,tag=bedwars] at @s run function bedwars:gui/click
 
 #execute as @a[tag=bedwars,scores={bedwarsclick=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{type:"basetp"}}}] run tellraw @s [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"Du wirst in 5 Sekunden zu deiner Base teleportiert!","color":"green"}]
 #execute at @a[tag=bedwars,scores={bedwarsclick=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{type:"basetp"}}}] run particle portal ~ ~0.1 ~ 0.3 1 0.3 0.3 100
@@ -44,6 +44,10 @@ scoreboard players set @a bedwarsclick 0
 #scoreboard players remove @a[tag=bedwars,scores={bedwarscooldown=1..}] bedwarscooldown 1
 #execute as @a[tag=bedwars,scores={bedwarscooldown=1}] run function bedwars:teleport
 execute if entity @a[tag=bedwars] run function bedwars:trap
+
+execute as @a[tag=bedwars,scores={bedwarscraftironingot=1..}] run clear @s iron_block
+execute as @a[tag=bedwars,scores={bedwarscraftironingot=1..}] run clear @s iron_ingot
+scoreboard players reset @a[scores={bedwarscraftironingot=1..}] bedwarscraftironingot
 
 execute as @a[tag=bedwars,scores={bedwarsbreakred=1..}] at @s run tellraw @a[distance=0..] [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"selector":"@s"},{"text":" broke the bed of team ","color":"aqua"},{"text":"Red","color":"red"},{"text":"!","color":"aqua"}]
 execute at @a[tag=bedwars,scores={bedwarsbreakred=1..}] run scoreboard players set @a[tag=bedwars,tag=bedwarsred,distance=0..] bedwarsCanRespawn 0
