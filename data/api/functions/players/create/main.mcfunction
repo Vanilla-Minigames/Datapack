@@ -9,3 +9,5 @@ scoreboard players operation @s ID = #Maxid ID
 execute store result storage api:players list[-1].id int 1 run scoreboard players get @s ID
 
 execute positioned 0 0 0 run function api:players/update/ranks/current
+
+function api:uuid/add

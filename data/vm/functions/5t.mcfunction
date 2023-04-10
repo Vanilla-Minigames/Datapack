@@ -1,14 +1,4 @@
-execute as @a[team=] run tellraw @s [{"selector":"@s","color":"aqua"},{"text":" joined for the first time!","color":"green"}]
-scoreboard players set @a[team=] rank 90
-scoreboard players set @a[team=] l 1
-team join 90player @a[team=]
-
-scoreboard players set @a[scores={rejoin=1..}] l 1
-execute as @a[scores={rejoin=1..}] run tellraw @s [{"text":"Welcome back, ","color":"green"},{"selector":"@s"},{"text":"!"}]
-scoreboard players reset @a[scores={rejoin=1..}] rejoin
-
 execute at @a[tag=lobby,nbt={SelectedItem:{id:"minecraft:compass"}}] unless entity @e[type=chest_minecart,tag=lobby_gui,distance=..5] run function vm:gui/create
-
 tellraw @a[scores={Party=-2}] [{"text":"[","color":"gray"},{"text":"Party","color":"gold"},{"text":"] "},{"text":"All party commands:\n","color":"yellow"},{"text":"- /trigger Party set -1: Leave the current party\n","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger Party set -1"}},{"text":"- /trigger Party set <ID>: Invite the player with the ID into your party","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger Party set "}}]
 scoreboard players set @a Party -3
 scoreboard players enable @a Party

@@ -1,4 +1,5 @@
-execute as @a[tag=!registered] run function api:players/create/current
+execute as @a[tag=!registered] run function vm:join_server/first
+execute as @a[scores={rejoin=1..}] run function vm:join_server/index
 
 execute as @a[tag=skywars,nbt={OnGround: 0b}] store result score @s apply_damage run data get entity @s FallDistance
 execute as @a[scores={apply_damage=1..},gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players remove @s apply_damage 3
