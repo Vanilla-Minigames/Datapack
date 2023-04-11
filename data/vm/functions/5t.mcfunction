@@ -20,7 +20,6 @@ execute as @a[scores={gm=1}] run gamemode creative
 execute as @a[scores={gm=2}] run gamemode adventure
 execute as @a[scores={gm=3}] run gamemode spectator
 scoreboard players set @a[scores={gm=0..}] gm -1
-scoreboard players enable @a[scores={rank=..20}] gm
 scoreboard players enable @a[tag=gm] gm
 
 execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars,tag=!bedwars,tag=!bingo] run gamemode adventure @s
