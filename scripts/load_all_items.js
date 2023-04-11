@@ -4,7 +4,8 @@ const excluded = [
 	"dragon_egg",
 	"spawner",
 	"air",
-	"barrier"
+	"barrier",
+	"bedrock"
 ]
 const excludedFunctions = [
 	str => str.startsWith("end_"),
@@ -12,11 +13,11 @@ const excludedFunctions = [
 	str => str.includes("command_block"),
 	str => str.includes("_spawn_egg"),
 	str => str.includes("shulker_"),
-	str => str.includes("structure_")
+	str => str.includes("structure_"),
+	str => str.includes("_hanging_sign")
 ]
 
 const fs = require("fs")
-
 async function main() {
 	const res = await fetch("https://raw.githubusercontent.com/Ersatz77/mcdata/1.19.4/processed/datapacks/mcdata.all_tags/data/mcdata/tags/items/all.json")
 	const json = await res.json()

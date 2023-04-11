@@ -31,19 +31,18 @@ team join Blue @a[tag=bingowait,tag=bingoblue]
 team join Yellow @a[tag=bingowait,tag=bingoyellow]
 team join Green @a[tag=bingowait,tag=bingogreen]
 
-execute if score #bingodimension value matches 1 in bingo:overworld1 run kill @e[type=marker,tag=bingospawn,distance=0..]
-execute if score #bingodimension value matches 1 in bingo:overworld1 run forceload add 0 0
-execute if score #bingodimension value matches 1 in bingo:overworld1 run summon marker 0 0 0 {Tags:["bingospawn","bingonew"]}
+execute if score #bingodimension value matches 1 in bingo:overworld1 as @e[type=marker,tag=bingospawn,distance=0..] run tag @s add bingonew
+execute if score #bingodimension value matches 1 in bingo:overworld1 unless entity @e[type=marker,tag=bingospawn,distance=0..] run summon marker -200000 0 0 {Tags:["bingospawn","bingonew"]}
 
-execute at @e[type=marker,tag=bingospawn,tag=bingonew] run forceload add ~ ~
-execute at @e[type=marker,tag=bingospawn,tag=bingonew] positioned over world_surface run tp @a[tag=bingowait] ~ ~ ~
-execute at @e[type=marker,tag=bingospawn,tag=bingonew] positioned over world_surface run spawnpoint @a[tag=bingowait,distance=0..] ~ ~ ~
+execute at @e[type=marker,tag=bingospawn,tag=bingonew] positioned ~10000 ~ ~ positioned over world_surface run tp @a[tag=bingowait] ~ ~ ~
+execute at @e[type=marker,tag=bingospawn,tag=bingonew] positioned ~10000 ~ ~ positioned over world_surface run spawnpoint @a[tag=bingowait,distance=0..] ~ ~ ~
+execute as @e[type=marker,tag=bingospawn,tag=bingonew] at @s run tp @s ~10000 ~ ~
 
 execute as @e[type=marker,tag=bingospawn,tag=bingonew] store result score #bingoX temp run data get entity @s Pos[0]
 execute as @e[type=marker,tag=bingospawn,tag=bingonew] store result score #bingoZ temp run data get entity @s Pos[2]
-execute at @e[type=marker,tag=bingospawn,tag=bingonew] run fill ~ -64 ~ ~15 -61 ~15 bedrock
-execute at @e[type=marker,tag=bingospawn,tag=bingonew] run fill ~1 -63 ~1 ~14 -62 ~14 stone
-scoreboard players set #amount temp 0
+execute at @e[type=marker,tag=bingospawn,tag=bingonew] run fill 0 -64 0 15 -61 15 bedrock
+execute at @e[type=marker,tag=bingospawn,tag=bingonew] run fill 1 -63 1 14 -62 14 stone
+scoreboard players set #bingototal value 0
 scoreboard players set #bingoOffset temp 0
 execute unless entity @e[type=marker,tag=bingospawn,tag=bingonew] run tellraw @a[tag=bingowait] {"text":"Marker missing, try again","color":"red"}
 execute if entity @e[type=marker,tag=bingospawn,tag=bingonew] run function bingo:pick_item

@@ -8,12 +8,12 @@ tellraw @a[scores={Help=1}] [{"text":"","color":"yellow"},{"text":"[","color":"g
 scoreboard players set @a[scores={Help=1..}] Help 0
 scoreboard players enable @a Help
 
-tellraw @a[scores={JoinMe=-1},tag=!joinme] [{"text":"[","color":"gray"},{"text":"JoinMe","color":"gold"},{"text":"] "},{"text":"You cannot create JoinMes!","color":"red"}]
-tellraw @a[scores={JoinMe=-1},tag=joinme,tag=lobby] [{"text":"[","color":"gray"},{"text":"JoinMe","color":"gold"},{"text":"] "},{"text":"You cannot create a JoinMe in the lobby!","color":"red"}]
-execute as @a[scores={JoinMe=1..}] run function vm:joinme_join
-execute as @a[scores={JoinMe=-1},tag=joinme,tag=!lobby] run function vm:joinme
-scoreboard players set @a JoinMe -2
-scoreboard players enable @a JoinMe
+tellraw @a[scores={joinme=-1},tag=!joinme] [{"text":"[","color":"gray"},{"text":"JoinMe","color":"gold"},{"text":"] "},{"text":"You cannot create JoinMes!","color":"red"}]
+tellraw @a[scores={joinme=-1},tag=joinme,tag=lobby] [{"text":"[","color":"gray"},{"text":"JoinMe","color":"gold"},{"text":"] "},{"text":"You cannot create a JoinMe in the lobby!","color":"red"}]
+execute as @a[scores={joinme=1..}] run function vm:joinme_join
+execute as @a[scores={joinme=-1},tag=joinme,tag=!lobby] run function vm:joinme
+scoreboard players set @a joinme -2
+scoreboard players enable @a joinme
 
 execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars,tag=!bedwars,tag=!bingo] run gamemode adventure @s
 execute as @a[tag=nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 100
