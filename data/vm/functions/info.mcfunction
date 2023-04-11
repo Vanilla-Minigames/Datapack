@@ -10,6 +10,7 @@ scoreboard objectives add l trigger {"text":"Hub","color":"gold"}
 scoreboard objectives add Help trigger {"text":"Help","color":"gold"}
 scoreboard objectives add Party trigger {"text":"Party","color":"gold"}
 scoreboard objectives add joinme trigger {"text":"JoinMe","color":"gold"}
+scoreboard objectives add gm trigger {"text":"Game Mode","color":"gold"}
 scoreboard objectives add partyID dummy
 scoreboard objectives add playtime minecraft.custom:minecraft.play_time
 scoreboard objectives add apply_damage dummy

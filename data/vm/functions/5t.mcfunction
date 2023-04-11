@@ -15,6 +15,14 @@ execute as @a[scores={joinme=-1},tag=joinme,tag=!lobby] run function vm:joinme
 scoreboard players set @a joinme -2
 scoreboard players enable @a joinme
 
+tellraw @a[scores={gm=0}] [{"text":"","color":"yellow"},{"text":"[","color":"gray"},{"text":"Game Mode","color":"gold"},{"text":"] ","color":"gray"},{"text":"How to switch game modes:\n","color":"aqua"},{"text":"- /trigger gm: Show this message\n"},{"text":"- /trigger gm set 1: Switch to creative mode\n"},{"text":"- /trigger gm set 2: Switch to adventure mode\n"},{"text":"- /trigger gm set 3: Switch to spectator mode"}]
+execute as @a[scores={gm=1}] run gamemode creative
+execute as @a[scores={gm=2}] run gamemode adventure
+execute as @a[scores={gm=3}] run gamemode spectator
+scoreboard players set @a[scores={gm=0..}] gm -1
+scoreboard players enable @a[scores={rank=..20}] gm
+scoreboard players enable @a[tag=gm] gm
+
 execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars,tag=!bedwars,tag=!bingo] run gamemode adventure @s
 execute as @a[tag=nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 100
 execute as @a[tag=!nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 4
