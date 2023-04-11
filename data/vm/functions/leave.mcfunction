@@ -13,6 +13,10 @@ tag @s remove bedwarsgreen
 tag @s remove bedwarswait
 tag @s remove nohitcooldown
 tag @s remove bingo
+tag @s remove bingored
+tag @s remove bingoblue
+tag @s remove bingoyellow
+tag @s remove bingogreen
 tag @s remove bingowait
 tag @s remove lobby
 

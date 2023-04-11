@@ -1,17 +1,9 @@
-execute store result score #availablemaps temp if data storage bedwars:maps free[]
+execute store result score #playing temp if entity @a[tag=bingo]
 
-execute if score #availablemaps temp matches 0 run tellraw @s [{"text":"[","color":"gray"},{"text":"BedWars","color":"yellow"},{"text":"] "},{"text":"There is no map available currently!","color":"red"}]
-execute if score #availablemaps temp matches 1.. run function vm:join_game
-execute if score #availablemaps temp matches 1.. if score #bedwarswait temp matches 1.. run scoreboard players operation @s xpcountdown = @r[tag=bedwarswait] xpcountdown
-execute if score #availablemaps temp matches 1.. run tag @s add bedwarswait
-execute if score #availablemaps temp matches 1.. store result score #bedwarsmap temp run data get storage bedwars:maps free[0].id
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 1 in bedwars:1 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 2 in bedwars:2 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 3 in bedwars:3 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 4 in bedwars:4 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 5 in bedwars:5 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 6 in bedwars:6 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 7 in bedwars:7 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 8 in bedwars:8 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 9 in bedwars:9 run tp @s 0 50 0
-execute if score #availablemaps temp matches 1.. if score #bedwarsmap temp matches 10 in bedwars:10 run tp @s 0 50 0
+execute if score #playing temp matches 1.. run tellraw @s [{"text":"[","color":"gray"},{"text":"Bingo","color":"yellow"},{"text":"] "},{"text":"There is no map available currently!","color":"red"}]
+execute if score #playing temp matches 0 run function vm:join_game
+execute if score #playing temp matches 0 if score #bingowait temp matches 1.. run scoreboard players operation @s xpcountdown = @r[tag=bingowait] xpcountdown
+execute if score #playing temp matches 0 run tag @s add bingowait
+execute if score #playing temp matches 0 run gamemode spectator @s
+execute if score #playing temp matches 0 if score #bingodimension value matches 1 in bingo:overworld1 run forceload add 0 0
+execute if score #playing temp matches 0 if score #bingodimension value matches 1 in bingo:overworld1 run tp @s 0 200 0

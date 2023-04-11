@@ -1,5 +1,6 @@
 execute store result score #skywarswait_1_8 temp if entity @a[tag=skywarswait_1_8]
 execute if score #skywarswait_1_8 temp matches 0..1 run scoreboard players set #skywarsstart_1_8 value 0
+execute if score #skywarswait_1_8 temp matches 0..1 run schedule clear skywars:start_1_8
 execute if score #skywarswait_1_8 temp matches 1 run title @a[tag=skywarswait_1_8] actionbar {"text":"Waiting for at least one more player...","color":"yellow"}
 execute if score #skywarswait_1_8 temp matches 2.. if score #skywarsstart_1_8 value matches 0 store result score #availablemaps temp if data storage skywars:maps_1_8 free[]
 execute if score #skywarswait_1_8 temp matches 2.. if score #skywarsstart_1_8 value matches 0 if score #availablemaps temp matches 0 run title @a[tag=skywarswait_1_8] actionbar {"text":"No maps available! Waiting...","color":"red"}
@@ -10,6 +11,7 @@ execute if score #skywarswait_1_8 temp matches 2.. if score #skywarsstart_1_8 va
 
 execute store result score #skywarswait_1_16 temp if entity @a[tag=skywarswait_1_16]
 execute if score #skywarswait_1_16 temp matches 0..1 run scoreboard players set #skywarsstart_1_16 value 0
+execute if score #skywarswait_1_16 temp matches 0..1 run schedule clear skywars:start_1_16
 execute if score #skywarswait_1_16 temp matches 1 run title @a[tag=skywarswait_1_16] actionbar {"text":"Waiting for at least one more player...","color":"yellow"}
 execute if score #skywarswait_1_16 temp matches 2.. if score #skywarsstart_1_16 value matches 0 store result score #availablemaps temp if data storage skywars:maps_1_16 free[]
 execute if score #skywarswait_1_16 temp matches 2.. if score #skywarsstart_1_16 value matches 0 if score #availablemaps temp matches 0 run title @a[tag=skywarswait_1_16] actionbar {"text":"No maps available! Waiting...","color":"red"}

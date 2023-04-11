@@ -1,5 +1,6 @@
 execute store result score #bedwarswait temp if entity @a[tag=bedwarswait]
 execute if score #bedwarswait temp matches 0..1 run scoreboard players set #bedwarsstart value 0
+execute if score #bedwarswait temp matches 0..1 run schedule clear bedwars:start
 execute if score #bedwarswait temp matches 1 run title @a[tag=bedwarswait] actionbar {"text":"Waiting for at least one more player...","color":"yellow"}
 execute if score #bedwarswait temp matches 2.. if score #bedwarsstart value matches 0 store result score #availablemaps temp if data storage bedwars:maps free[]
 execute if score #bedwarswait temp matches 2.. if score #bedwarsstart value matches 0 if score #availablemaps temp matches 0 run title @a[tag=bedwarswait] actionbar {"text":"No maps available! Waiting...","color":"red"}

@@ -28,6 +28,7 @@ scoreboard objectives add doublejumpTimer minecraft.custom:minecraft.play_time
 scoreboard objectives add gui_page dummy
 team add gui {"text":"GUI","color":"gold"}
 
+gamerule commandBlockOutput false
 gamerule doMobSpawning false
 gamerule commandModificationBlockLimit 655360
 gamerule disableRaids true

@@ -2,13 +2,17 @@ const excluded = [
 	"dragon_breath",
 	"dragon_head",
 	"dragon_egg",
-	"spawner"
+	"spawner",
+	"air",
+	"barrier"
 ]
 const excludedFunctions = [
 	str => str.startsWith("end_"),
 	str => str.includes("_wall_"),
 	str => str.includes("command_block"),
-	str => str.includes("_spawn_egg")
+	str => str.includes("_spawn_egg"),
+	str => str.includes("shulker_"),
+	str => str.includes("structure_")
 ]
 
 const fs = require("fs")
@@ -20,7 +24,7 @@ async function main() {
 	const data = json.values.map(id => id.replace("minecraft:", "")).filter(id => !excluded.includes(id) && !excludedFunctions.some(f => f(id)))
 	const formatted =
 		"data modify storage bingo:data all set value []\n" +
-		data.map((id, i) => "data modify storage bingo:data all append value {id:" + i + ",name:\"" + id + "\",detect:\"execute as @a[tag=bingo] store result score @s bingoitem run clear @s " + id + " 0\"}").join("\n")
+		data.map((id, i) => "data modify storage bingo:data all append value {id:" + i + ",name:\"" + id + "\",detect:\"execute if score #bingochecking temp matches " + i + " as @a[tag=bingo,scores={bingoitem=0}] store result score @s bingoitem run clear @s " + id + " 0\"}").join("\n")
 	fs.writeFileSync(process.cwd() + "/data/bingo/functions/load_items.mcfunction", formatted)
 
 	fs.writeFileSync(
