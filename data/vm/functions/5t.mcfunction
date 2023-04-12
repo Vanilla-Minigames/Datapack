@@ -23,6 +23,7 @@ scoreboard players set @a[scores={gm=0..}] gm -1
 scoreboard players enable @a[tag=gm] gm
 
 execute as @a[scores={Spec=0..}] run gamemode spectator @s
+execute as @a if score @s ID = @r[scores={Spec=1..}] Spec run spectate @s @r[scores={Spec=1..}]
 scoreboard players set @a Spec -1
 scoreboard players enable @a Spec
 
