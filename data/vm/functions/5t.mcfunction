@@ -22,6 +22,11 @@ execute as @a[scores={gm=3},tag=gm] run gamemode spectator @s
 scoreboard players set @a[scores={gm=0..}] gm -1
 scoreboard players enable @a[tag=gm] gm
 
+execute as @a[scores={Spec=0..}] run gamemode spectator @s
+execute as @a if score @s ID = @r[scores={Spec=1..}] Spec run spectate @s @r[scores={Spec=1..}]
+scoreboard players set @a Spec -1
+scoreboard players enable @a Spec
+
 execute as @a[gamemode=!adventure,gamemode=!spectator,tag=!gm,tag=!skywars,tag=!bedwars,tag=!bingo] run gamemode adventure @s
 execute as @a[tag=nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 100
 execute as @a[tag=!nohitcooldown] run attribute @s minecraft:generic.attack_speed base set 4
