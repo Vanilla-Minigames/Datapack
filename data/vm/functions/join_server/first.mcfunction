@@ -1,4 +1,4 @@
-# This function is executed for every player that joins the server for the first time. 
+# This function is executed for every player that joins the server for the first time.
 
 function api:players/create/current
 

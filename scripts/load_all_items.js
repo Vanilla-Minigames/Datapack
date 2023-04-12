@@ -5,7 +5,9 @@ const excluded = [
 	"spawner",
 	"air",
 	"barrier",
-	"bedrock"
+	"bedrock",
+	"debug_stick",
+	"petrified_oak_slab"
 ]
 const excludedFunctions = [
 	str => str.startsWith("end_"),
