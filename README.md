@@ -33,11 +33,11 @@ If you're using our development server, that's already done for you.
 | - | -
 | /trigger l | Leaves the current game and joins the lobby
 | /trigger Party | Shows all party commands and invites someone to your party
-| /trigger gm | soon: Switches your gamemode (1 = creative, 2 = adventure, 3 = spectator)
-| /trigger Spec | soon: Without arguments, leaves the current game and switches your gamemode to spectator. With arguments, leaves the game teleports you to the player with the specified ID.
+| /trigger gm | Switches your gamemode (1 = creative, 2 = adventure, 3 = spectator)
+| /trigger joinme | Create a JoinMe for the current game
+| /trigger spec | Without arguments, leaves the current game and switches your gamemode to spectator. With arguments, leaves the game teleports you to the player with the specified ID.
 
 ## Credits
 This data pack uses the following libraries:
-- [Anticheat](https://github.com/DEVTomatoCake/Anticheat) by TomatoCake and RedestoneCrafter
 - API for storing data per player by [Meierschlumpf](https://github.com/Meierschlumpf)
 They're modified to fit the needs of this data pack.

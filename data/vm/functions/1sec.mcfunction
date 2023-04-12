@@ -37,8 +37,6 @@ execute as @a[distance=..30,tag=!lobby] run scoreboard players set @s l 1
 
 execute as @a[name=booky10,tag=!uuid_migration] run function api:uuid/add
 execute as @a[name=booky10,tag=!uuid_migration] run tag @s add uuid_migration
-execute as @a[name=Benonardo,tag=!uuid_migration] run function api:uuid/add
-execute as @a[name=Benonardo,tag=!uuid_migration] run tag @s add uuid_migration
 execute as @a[name=Farbe_,tag=!uuid_migration] run function api:uuid/add
 execute as @a[name=Farbe_,tag=!uuid_migration] run tag @s add uuid_migration
 execute as @a[name=thevalleyy,tag=!uuid_migration] run function api:uuid/add
