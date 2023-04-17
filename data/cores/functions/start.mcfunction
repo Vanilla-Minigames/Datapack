@@ -32,10 +32,10 @@ team join Green @a[tag=coreswait,tag=coresgreen]
 execute if score #coresmap temp matches 1 run tellraw @a[tag=coreswait] [{"text":"[","color":"gray"},{"text":"cores","color":"yellow"},{"text":"] "},{"text":"Map built by: ","color":"aqua"},{"text":"Netherite64","color":"gold"}]
 execute if score #coresmap temp matches 1 in cores:1 if loaded 0 0 0 run function cores:reset/1
 execute if score #coresmap temp matches 1 in cores:1 unless loaded 0 0 0 run schedule function cores:reset/1 2s
-execute if score #coresmap temp matches 1 in cores:1 run tp @a[tag=coreswait,tag=coresred] -27 4 0 -180
-execute if score #coresmap temp matches 1 in cores:1 run tp @a[tag=coreswait,tag=coresblue] 0 4 -27 180
-execute if score #coresmap temp matches 1 in cores:1 run spawnpoint @a[tag=coreswait,tag=coresred] -27 4 0
-execute if score #coresmap temp matches 1 in cores:1 run spawnpoint @a[tag=coreswait,tag=coresblue] 0 4 -27
+execute if score #coresmap temp matches 1 in cores:1 run tp @a[tag=coreswait,tag=coresred] 0.0 7 56 180 0
+execute if score #coresmap temp matches 1 in cores:1 run tp @a[tag=coreswait,tag=coresblue] 0.0 7 -55 0 0
+execute if score #coresmap temp matches 1 in cores:1 run spawnpoint @a[tag=coreswait,tag=coresred] 0 7 56
+execute if score #coresmap temp matches 1 in cores:1 run spawnpoint @a[tag=coreswait,tag=coresblue] 0 7 -55
 
 scoreboard players add @a[tag=coreswait] coresgames 1
 scoreboard players operation @a[tag=coreswait] map = #coresmap temp
