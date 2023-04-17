@@ -18,6 +18,12 @@ tag @s remove bingoblue
 tag @s remove bingoyellow
 tag @s remove bingogreen
 tag @s remove bingowait
+tag @s remove cores
+tag @s remove coresred
+tag @s remove coresblue
+tag @s remove coresyellow
+tag @s remove coresgreen
+tag @s remove coreswait
 tag @s remove lobby
 
 title @s actionbar ""

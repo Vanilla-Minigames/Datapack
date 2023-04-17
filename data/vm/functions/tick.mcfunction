@@ -29,5 +29,7 @@ execute if entity @a[tag=bedwars] run function bedwars:tick
 execute if entity @a[tag=bedwarswait] run function bedwars:tick
 execute if entity @a[tag=bingo] run function bingo:tick
 execute if entity @a[tag=bingowait] run function bingo:tick
+execute if entity @a[tag=cores] run function cores:tick
+execute if entity @a[tag=coreswait] run function cores:tick
 
 schedule function vm:tick 1t

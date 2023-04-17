@@ -4,6 +4,7 @@
 		"skywars:info",
 		"bedwars:info",
 		"bingo:info",
+		"cores:info",
 		"api:common/init",
 		"api:ranks/load"
 	]
