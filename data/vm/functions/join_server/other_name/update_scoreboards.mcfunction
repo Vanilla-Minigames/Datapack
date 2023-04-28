@@ -1,7 +1,6 @@
 function api:players/get/current
 
 execute store result score @s rank run data get storage api:players current.rankId
-say execute store result score @s rank run data get storage api:players current.rankId
 
 execute store result score @s playtime run data get storage api:players current.lobby.playtime
 execute store result score @s coins run data get storage api:players current.lobby.coins

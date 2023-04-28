@@ -32,17 +32,12 @@ execute as @a[scores={xpcountdown=0}] at @s run playsound minecraft:block.note_b
 execute as @a[scores={xpcountdown=1..3}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 100 0.8
 scoreboard players remove @a[scores={xpcountdown=0..}] xpcountdown 1
 
-execute as @a[distance=..30,tag=!lobby] run tellraw @a[scores={rank=1..19}] [{"selector":"@s"},{"text":" in lobby without lobby tag"}]
-execute as @a[distance=..30,tag=!lobby] run scoreboard players set @s l 1
+execute as @a[distance=..50,tag=!lobby] run tellraw @a[scores={rank=1..19}] [{"selector":"@s"},{"text":" in lobby without lobby tag"}]
+execute as @a[distance=..50,tag=!lobby] run scoreboard players set @s l 1
 
-execute as @a[name=booky10,tag=!uuid_migration] run function api:uuid/add
-execute as @a[name=booky10,tag=!uuid_migration] run tag @s add uuid_migration
 execute as @a[name=Farbe_,tag=!uuid_migration] run function api:uuid/add
 execute as @a[name=Farbe_,tag=!uuid_migration] run tag @s add uuid_migration
-execute as @a[name=thevalleyy,tag=!uuid_migration] run function api:uuid/add
-execute as @a[name=thevalleyy,tag=!uuid_migration] run tag @s add uuid_migration
-execute as @a[name=0000000001000101,tag=!uuid_migration] run function api:uuid/add
-execute as @a[name=0000000001000101,tag=!uuid_migration] run tag @s add uuid_migration
+execute as @a[name=thevalleyy,tag=uuid_migration] run tag @s remove uuid_migration
 
 execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3,nbt={SelectedItem:{id:"minecraft:compass"}}] run tp @s ~ -120 ~
 execute as @e[type=chest_minecart,tag=gui,tag=!bedwars] at @s unless entity @a[distance=..3] run kill @s
