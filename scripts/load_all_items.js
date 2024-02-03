@@ -7,16 +7,22 @@ const excluded = [
 	"barrier",
 	"bedrock",
 	"debug_stick",
-	"petrified_oak_slab"
+	"petrified_oak_slab",
+	"elytra",
+	"player_head",
+	"knowledge_book",
+	"reinforced_deepslate",
+	"jigsaw",
+	"light"
 ]
 const excludedFunctions = [
 	str => str.startsWith("end_"),
-	str => str.includes("_wall_"),
+	str => str.startsWith("infested_"),
 	str => str.includes("command_block"),
+	str => str.includes("chorus_"),
 	str => str.includes("_spawn_egg"),
 	str => str.includes("shulker_"),
-	str => str.includes("structure_"),
-	str => str.includes("elytra")
+	str => str.includes("structure_")
 ]
 
 const fs = require("node:fs")
