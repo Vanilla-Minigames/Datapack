@@ -1,5 +1,6 @@
 {
     "datapack.env.exclude": [
         "**/generated/**/*.mcfunction"
-    ]
+    ],
+    "workbench.iconTheme": "mc-dp-icons"
 }

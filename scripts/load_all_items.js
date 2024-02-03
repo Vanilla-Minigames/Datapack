@@ -16,12 +16,12 @@ const excludedFunctions = [
 	str => str.includes("_spawn_egg"),
 	str => str.includes("shulker_"),
 	str => str.includes("structure_"),
-	str => str.includes("_hanging_sign")
+	str => str.includes("elytra")
 ]
 
-const fs = require("fs")
+const fs = require("node:fs")
 async function main() {
-	const res = await fetch("https://raw.githubusercontent.com/Ersatz77/mcdata/1.19.4/processed/datapacks/mcdata.all_tags/data/mcdata/tags/items/all.json")
+	const res = await fetch("https://raw.githubusercontent.com/Ersatz77/mcdata/1.20.4/processed/datapacks/mcdata.all_tags/data/mcdata/tags/items/all.json")
 	const json = await res.json()
 
 	const data = json.values.map(id => id.replace("minecraft:", "")).filter(id => !excluded.includes(id) && !excludedFunctions.some(f => f(id)))

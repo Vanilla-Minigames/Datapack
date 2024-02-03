@@ -32,9 +32,8 @@ team join Blue @a[tag=bingowait,tag=bingoblue]
 team join Yellow @a[tag=bingowait,tag=bingoyellow]
 team join Green @a[tag=bingowait,tag=bingogreen]
 
-execute if score #bingodimension value matches 1 in bingo:overworld1 as @e[type=marker,tag=bingospawn,distance=0..] run say aaaaa
 execute if score #bingodimension value matches 1 in bingo:overworld1 as @e[type=marker,tag=bingospawn,distance=0..] run tag @s add bingonew
-execute if score #bingodimension value matches 1 in bingo:overworld1 unless entity @e[type=marker,tag=bingospawn,distance=0..] run say sus
+execute if score #bingodimension value matches 1 in bingo:overworld1 as @e[type=marker,tag=bingospawn,tag=bingonew] run tp @s 0 0 0
 execute if score #bingodimension value matches 1 in bingo:overworld1 unless entity @e[type=marker,tag=bingospawn,distance=0..] run summon marker 0 0 0 {Tags:["bingospawn","bingonew"]}
 
 execute at @e[type=marker,tag=bingospawn,tag=bingonew] run fill 0 -64 0 15 -61 15 bedrock
